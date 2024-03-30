@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo-login {
+    display: flex ;
+    justify-content: center;
+    margin-bottom: -40px;
+  }
+  
+  .container-login {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 20px auto;
+    background: #fff;
+    padding-bottom: 20px;
+    width: 450px;
+    background-color: #f4f7f5;
+  }
+  
+  .header-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .text-login {
+    color: black;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  
+  .underline-login {
+    width: 61px;
+    height: 6px;
+    background: black;
+    border-radius: 9px;
+  }
+  
+  .inputs-login{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .text-field-login {
+    align-items: center;
+    margin: auto;
+    width: 400px;
+    background: #f4f7f5;
+    border-radius: 9px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+  
+  .input-logininput {
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 16px;
+    padding-left: 15px;
+  }
+  
+  .forget-password-login {
+    padding-left: 120px;
+    margin-top: 27px;
+    color: #000000;
+    font-size: 22;
+    font-weight: 400;
+  }
+  
+  .forget-password-login span {
+    color: #3cb371;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+  
+  .submit-container-login {
+    display: flex;
+    gap: 40px;
+    margin: 30px auto;
+  }
+  
+  .submit-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 50px;
+    color: #fff;
+    background: black;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  .gray-login {
+    background: #eaeaea;
+    color: #010101;
+  }
+  
+  .haveaccount-login {
+    margin-top: -15px;
+    font-size: 16px;
+    color: #000000;
+    padding-left: 120px;
+    font-weight: 400;
+  }
+  
+  .haveaccount-login span {
+    color: #3cb371;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 5px;
+    font-weight: 400;
+  }
+  
+  .design-login{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #f4f7f5;
+    font-size: 14px;
+    font-weight: 350;
+    width: 80%;
+    height: 40px;
+  }

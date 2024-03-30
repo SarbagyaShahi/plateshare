@@ -1,0 +1,179 @@
+------------------------------------/register 2024/2/5 11:10:13------------------------------------
+
+TypeORMError: Cannot update entity because entity id is not set in the entity.
+    at C:\Users\dell\Desktop\platesharee\Backend\src\query-builder\ReturningResultsEntityUpdator.ts:217:27
+    at Array.map (<anonymous>)
+    at ReturningResultsEntityUpdator.insert (C:\Users\dell\Desktop\platesharee\Backend\src\query-builder\ReturningResultsEntityUpdator.ts:210:40)
+    at InsertQueryBuilder.execute (C:\Users\dell\Desktop\platesharee\Backend\src\query-builder\InsertQueryBuilder.ts:175:53)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------/login 2024/2/0 10:25:38--------------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'email')
+    at AuthService.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:40:78)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:14:53)
+    at C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:4:12)
+    at AuthService.login (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:83:16)
+    at AuthController.login (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\auth.controller.ts:24:34)
+    at AuthController.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\lib\bind.ts:116:46)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\lib\bind.ts:33:23)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/authorized 2024/2/0 10:43:14-----------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\Users\dell\Desktop\platesharee\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\Users\dell\Desktop\platesharee\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\Users\dell\Desktop\platesharee\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\Users\dell\Desktop\platesharee\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\Users\dell\Desktop\platesharee\Backend\src\store\store.global.ts:70:25)
+    at AuthController.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:14:53)
+    at C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/authorized 2024/2/0 10:44:1------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\Users\dell\Desktop\platesharee\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\Users\dell\Desktop\platesharee\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\Users\dell\Desktop\platesharee\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\Users\dell\Desktop\platesharee\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\Users\dell\Desktop\platesharee\Backend\src\store\store.global.ts:70:25)
+    at AuthController.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:14:53)
+    at C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/authorized 2024/2/0 10:44:9------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\Users\dell\Desktop\platesharee\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\Users\dell\Desktop\platesharee\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\Users\dell\Desktop\platesharee\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\Users\dell\Desktop\platesharee\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\Users\dell\Desktop\platesharee\Backend\src\store\store.global.ts:70:25)
+    at AuthController.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:14:53)
+    at C:\Users\dell\Desktop\platesharee\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/login/ 2024/2/5 11:10:41-------------------------------------
+
+Error: data and hash arguments required
+    at Object.compareSync (C:\Users\dell\Desktop\platesharee\Backend\node_modules\bcrypt\bcrypt.js:166:15)
+    at verifyHash (C:\Users\dell\Desktop\platesharee\Backend\src\utils\base.util.ts:39:19)
+    at AuthService.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:40:24)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:14:53)
+    at fulfilled (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/login/ 2024/2/5 11:11:35-------------------------------------
+
+Error: data and hash arguments required
+    at Object.compareSync (C:\Users\dell\Desktop\platesharee\Backend\node_modules\bcrypt\bcrypt.js:166:15)
+    at verifyHash (C:\Users\dell\Desktop\platesharee\Backend\src\utils\base.util.ts:39:19)
+    at AuthService.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:40:24)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:14:53)
+    at fulfilled (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/login/ 2024/2/5 11:40:59-------------------------------------
+
+Error: data and hash arguments required
+    at Object.compareSync (C:\Users\dell\Desktop\platesharee\Backend\node_modules\bcrypt\bcrypt.js:166:15)
+    at verifyHash (C:\Users\dell\Desktop\platesharee\Backend\src\utils\base.util.ts:39:19)
+    at AuthService.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:40:24)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:14:53)
+    at fulfilled (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------/login/ 2024/2/5 11:43:7--------------------------------------
+
+Error: data and hash arguments required
+    at Object.compareSync (C:\Users\dell\Desktop\platesharee\Backend\node_modules\bcrypt\bcrypt.js:166:15)
+    at verifyHash (C:\Users\dell\Desktop\platesharee\Backend\src\utils\base.util.ts:39:19)
+    at AuthService.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:40:24)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:14:53)
+    at fulfilled (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/login/ 2024/2/5 11:43:46-------------------------------------
+
+Error: data and hash arguments required
+    at Object.compareSync (C:\Users\dell\Desktop\platesharee\Backend\node_modules\bcrypt\bcrypt.js:166:15)
+    at verifyHash (C:\Users\dell\Desktop\platesharee\Backend\src\utils\base.util.ts:39:19)
+    at AuthService.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:40:24)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:14:53)
+    at fulfilled (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/login/ 2024/2/5 11:44:28-------------------------------------
+
+Error: data and hash arguments required
+    at Object.compareSync (C:\Users\dell\Desktop\platesharee\Backend\node_modules\bcrypt\bcrypt.js:166:15)
+    at verifyHash (C:\Users\dell\Desktop\platesharee\Backend\src\utils\base.util.ts:39:19)
+    at AuthService.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:40:24)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:14:53)
+    at fulfilled (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/login/ 2024/2/5 11:45:47-------------------------------------
+
+Error: data and hash arguments required
+    at Object.compareSync (C:\Users\dell\Desktop\platesharee\Backend\node_modules\bcrypt\bcrypt.js:166:15)
+    at verifyHash (C:\Users\dell\Desktop\platesharee\Backend\src\utils\base.util.ts:39:19)
+    at AuthService.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:40:24)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:14:53)
+    at fulfilled (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/login/ 2024/2/5 11:52:15-------------------------------------
+
+Error: data and hash arguments required
+    at Object.compareSync (C:\Users\dell\Desktop\platesharee\Backend\node_modules\bcrypt\bcrypt.js:166:15)
+    at verifyHash (C:\Users\dell\Desktop\platesharee\Backend\src\utils\base.util.ts:39:19)
+    at AuthService.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:40:24)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:33:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:14:53)
+    at fulfilled (C:\Users\dell\Desktop\platesharee\Backend\src\routes\auth\authservice.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+----------------------------------------------------------------------------------------------------
+

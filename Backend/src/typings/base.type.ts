@@ -9,8 +9,7 @@ export enum ActionType{
 
 export enum Role{
     ADMIN="admin",
-    MANAGER="manager",
-    BILLING="billing",
+    NGO="ngo",
     USER="user",
 }
 

@@ -3,12 +3,12 @@ export const dataStoreOptions:DataSourceOptions={
     type:"mysql",
     host:"localhost",
     database:"plateshare",
-    username:"user",
+    username:"root",
     synchronize: true,
     debug: false,
     logging: false,
     trace: false,
-    password:"password",
+    password:"",
     entities:[__dirname + '/entity/**/*.entity.{js,ts}'],
     migrations:[__dirname + '/migrations/**/*.entity.{js,ts}']
 }
