@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
     return (
         <Col sm={6} lg={4} xl={3} className="mb-4">
-            <Card className="overflow-hidden">
-                <div className="overflow-hidden">
+            <Card className="card">
+                <div className="card">
                     <Card.Img variant="top" src={image} />
                 </div>
                 <Card.Body>
@@ -22,7 +22,7 @@ function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
 
                     <div className="d-flex align-items-center justify-content-between">
                         <div className="menu_price">
-                            <h5 className="mb-0">${price}</h5>
+                            <h5 className="mb-0">Rs{price}</h5>
                         </div>
                         <div className="add_to_card">
                             <Link to="/">

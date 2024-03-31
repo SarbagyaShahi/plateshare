@@ -17,6 +17,7 @@ export class AuthService {
     ) { }
 
     async register(data: RegisterDto) {
+        console.log(data)
         let existingUser = await this.user_model.findOne({ where: { User_email: data.email } })
         if (existingUser)
             throw new InvalidInputError("Email already registered")

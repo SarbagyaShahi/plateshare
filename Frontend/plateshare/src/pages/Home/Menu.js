@@ -11,6 +11,8 @@ import Image7 from "../../Assets/menu/7.jpg";
 import Cards from "../../components/Layouts/Card";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
+import Button from 'react-bootstrap/Button';
+import Footer from "../../components/Footer";
 
 const mockData = [
     // {
@@ -24,50 +26,50 @@ const mockData = [
     {
         id: "0002",
         image: Image2,
-        title: "JholMomo",
-        paragraph: "Jhol momo is the typical nepali snacks with tasty jhol favourable for the winter season.",
+        title: "Chicken  Chowmin",
+        paragraph: "A typical nepali khaja which every one loves",
         rating: 3.5,
         price: 180,
     },
     {
         id: "0003",
         image: Image3,
-        title: "Chicken Chowmin",
-        paragraph: "Quite Favourable for the ",
+        title: "Crunchy Burger",
+        paragraph: "A delicious crunchy burger like nothing" ,
         rating: 4,
         price: 250,
     },
     {
         id: "0004",
         image: Image4,
-        title: "",
-        paragraph: "House patty, cheddar cheese, bacon, onion, mustard",
+        title: "Jhol Momo",
+        paragraph: "Famous delicious Khaja",
         rating: 3.5,
-        price: 99.25,
+        price: 250,
     },
     {
         id: "0005",
         image: Image5,
-        title: "Double Burger",
-        paragraph: "2 patties, cheddar cheese, mustard, pickles, tomatoes",
+        title: "Keema Noodles",
+        paragraph: "Tibetan dish",
         rating: 3.0,
-        price: 59.25,
+        price: 150,
     },
     {
         id: "0006",
         image: Image6,
-        title: "Turkey Burger",
-        paragraph: "Turkey, cheddar cheese, onion, lettuce, tomatoes, pickles",
+        title: "Panipuri",
+        paragraph: "A magical combination of the  puri,pani and aalo",
         rating: 3,
-        price: 79.18,
+        price: 80,
     },
     {
         id: "0007",
         image: Image7,
-        title: "Smokey House",
-        paragraph: "patty, cheddar cheese, onion, lettuce, tomatoes, pickles",
-        rating: 2.5,
-        price: 99.19,
+        title: "Maghiritta pizza",
+        paragraph: "Pizza for everyone",
+        rating: 5,
+        price: 500,
     },
     // {
     //     id: "0008",
@@ -77,10 +79,9 @@ const mockData = [
     //     rating: 2.0,
     //     price: 89.12,
     // },
-    // Add more mock data objects as needed
+   
 ];
 
-// Rating Logical Data
 const renderRatingIcons = (rating) => {
     const stars = [];
 
@@ -100,19 +101,25 @@ const renderRatingIcons = (rating) => {
 
 function Menu() {
     return (
-        <>
+    <>
         <Header/>
+        
         <section className="menu_section">
             <Container>
                 <Row>
                     <Col lg={{ span: 8, offset: 2 }} className="text-center mb-5">
+                    
                         <h2>Our Menu</h2>
                         <p className="para">
                             This is our menu.Here you  can find the food we can offer in reasonable price.Alsowe have created a folder where you can donate the food.
                         </p>
                     </Col>
                 </Row>
+                <Button variant="secondary" size="lg">
+          Donate
+        </Button>
                 <Row>
+                
                     {mockData.map((cardData, index) => (
                         <Cards
                             key={index}
@@ -126,28 +133,10 @@ function Menu() {
                     ))}
                 </Row>
 
-                <Row className="pt-5">
-                    <Col sm={6} lg={5}>
-                        <div className="ads_box ads_img1 mb-5 mb-md-0">
-                            <h4 className="mb-0">GET YOUR FREE</h4>
-                            <h5>CHEESE FRIES</h5>
-                            <Link to="/" className="btn btn_red px-4 rounded-0">
-                                Learn More
-                            </Link>
-                        </div>
-                    </Col>
-                    <Col sm={6} lg={7}>
-                        <div className="ads_box ads_img2">
-                            <h4 className="mb-0">GET YOUR FREE</h4>
-                            <h5>CHEESE FRIES</h5>
-                            <Link to="/" className="btn btn_red px-4 rounded-0">
-                                Learn More
-                            </Link>
-                        </div>
-                    </Col>
-                </Row>
+                
             </Container>
         </section>
+        <Footer/>
         </>
     );
 }

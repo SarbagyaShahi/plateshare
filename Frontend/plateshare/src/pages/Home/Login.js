@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../../styles/Login.css';
-import logoImage from '../../Assets/logo/logo.png'
+import logoImage from '../../Assets/logo/logo2.png'
 import { useNavigate, Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import Registration from './Registration';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -52,53 +53,52 @@ function Login() {
     }
     return (
 
-        <div>
+        <div className='container-login'>
             <div className="logo-login">
                 <a href="/">
-                    <img src={logoImage} alt="" width="90px" />
+                    <img src={logoImage} alt="" width="120px" />
                 </a>
             </div>
 
-
-            <div className='container-login'>
-                <div className="header-login">
-                    <div className="text-login">Login</div>
-                    <div className="underline-login"></div>
-                </div>
-
-
-                <div className="inputs-login">
-                    <div className='text-field-login'>
-                        <p>Email</p>
-                        <input className="design-login" type='text' placeholder='Enter Your Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                    </div>
-
-                    <div className='text-field-login'>
-                        <p>Password</p>
-                        <input className="design-login" type='text' placeholder='Enter Your Password' value={password} onChange={(e) => setPassword(e.target.value)} />
-                    </div>
-
-
-
-                </div>
-                <div className="forget-password-login">
-                    Forget Password? <span>Click here</span>
-                </div>
-
-                <div className="submit-container-login">
-                    <div className="submit" >
-                    <Button variant="info"onClick={handleLogin}>login</Button>
-                        
-                    </div>
-                </div>
-                <div className="haveaccount-login">
-                    Does not have account?
-                    <Link to="/register">
-                        <span>Register</span>
-                    </Link>
-                </div>
+            <div className="header-login">
+                <div className="text-login">Login</div>
+                <div className="underline-login"></div>
             </div>
+
+            <form>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="form1Example1">Email address</label>
+                    <input required type="email" id="form1Example1" class="form-control" placeholder='Enter Your Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="form1Example2">Password</label>
+                    <input required  type="password" id="form1Example2" class="form-control" placeholder='Enter Your Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                </div>
+
+                <div class="row mb-4">
+
+                    <div class="col mt-1 d-flex justify-content-end">
+                        <a href="#!">Forgot password?</a>
+                    </div>
+
+                    <div className="haveaccount-login mt-3  ">
+                        Does not have account?
+                        <Link to="/Registration">
+                            <span>Register</span>
+
+                        </Link>
+                    </div>
+
+                </div>
+
+
+                <button type='submit' class="btn btn-primary btn-block" onClick={handleLogin}>Sign in</button>
+            </form>
+
         </div>
+
 
     );
 }
