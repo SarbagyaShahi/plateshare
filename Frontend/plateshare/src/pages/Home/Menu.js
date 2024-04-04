@@ -14,6 +14,8 @@ import Header from "../../components/Header";
 import Button from 'react-bootstrap/Button';
 import Footer from "../../components/Footer";
 
+import Card from 'react-bootstrap/Card';
+
 const mockData = [
     // {
     //     id: "0001",
@@ -35,7 +37,7 @@ const mockData = [
         id: "0003",
         image: Image3,
         title: "Crunchy Burger",
-        paragraph: "A delicious crunchy burger like nothing" ,
+        paragraph: "A delicious crunchy burger like nothing",
         rating: 4,
         price: 250,
     },
@@ -79,7 +81,7 @@ const mockData = [
     //     rating: 2.0,
     //     price: 89.12,
     // },
-   
+
 ];
 
 const renderRatingIcons = (rating) => {
@@ -101,42 +103,59 @@ const renderRatingIcons = (rating) => {
 
 function Menu() {
     return (
-    <>
-        <Header/>
-        
-        <section className="menu_section">
-            <Container>
-                <Row>
-                    <Col lg={{ span: 8, offset: 2 }} className="text-center mb-5">
-                    
-                        <h2>Our Menu</h2>
-                        <p className="para">
-                            This is our menu.Here you  can find the food we can offer in reasonable price.Alsowe have created a folder where you can donate the food.
-                        </p>
-                    </Col>
-                </Row>
-                <Button variant="secondary" size="lg">
-          Donate
-        </Button>
-                <Row>
-                
-                    {mockData.map((cardData, index) => (
-                        <Cards
-                            key={index}
-                            image={cardData.image}
-                            rating={cardData.rating}
-                            title={cardData.title}
-                            paragraph={cardData.paragraph}
-                            price={cardData.price}
-                            renderRatingIcons={renderRatingIcons}
-                        />
-                    ))}
-                </Row>
+        <>
+            <Header />
 
-                
-            </Container>
-        </section>
-        <Footer/>
+            <section className="menu_section">
+                <Container>
+                    <Row>
+                        <Col lg={{ span: 8, offset: 2 }} className="text-center mb-5">
+
+                            <h2>Our Menu</h2>
+                            <p className="para">
+                                This is our menu.Here you  can find the food we can offer in reasonable price.Alsowe have created a folder where you can donate the food.
+                            </p>
+                        </Col>
+                    </Row>
+                  
+                    <Row className="menu-row">
+
+                        {mockData.map((cardData, index) => (
+                            // <Cards
+                            //     key={index}
+                            //     image={cardData.image}
+                            //     rating={cardData.rating}
+                            //     title={cardData.title}
+                            //     paragraph={cardData.paragraph}
+                            //     price={cardData.price}
+                            // //
+                            //      renderRatingIcons={renderRatingIcons}
+                            // />
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={cardData.image} width ={'200px'} height={'250px'}/>
+                                <Card.Body>
+                                    <Card.Title>{cardData.title}</Card.Title>
+                                    <Card.Text>
+                                    {cardData.paragraph}
+
+                                    </Card.Text>
+                                    <Card.Text>
+                                    {cardData.price}
+                                    </Card.Text>
+                                    <Card.Text>
+                                    {cardData.rating}
+                                    </Card.Text>
+                                    <Button variant="primary">Add to cart</Button>
+                                </Card.Body>
+                            </Card>
+                        ))}
+                    </Row>
+
+
+
+                </Container>
+            </section>
+            <Footer />
         </>
     );
 }
