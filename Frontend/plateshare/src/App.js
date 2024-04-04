@@ -5,6 +5,8 @@ import About from "./pages/Home/About";
 import Login from "./pages/Home/Login";
 import Menu from "./pages/Home/Menu";
 import Registration from "./pages/Home/Registration";
+import Cartpage from "./pages/Home/Cartpage";
+import AdminDashboard from "./admin/AdminDashboard";
 
 function App() {
   return (
@@ -12,11 +14,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
-        < Route path="/Login" element={<Login/>}/>
-        <Route path="/Menu" element={<Menu/>}/>
-        <Route path="/Registration" element={<Registration/>}/>
-   
-  
+        < Route path="/Login" element={<Login />} />
+        <Route path="/Menu" element={<Menu />} />
+        <Route path="/Registration" element={<Registration />} />
+        <Route path="/CartPage" element={<Cartpage />} />
+        <Route path="/AdminDashboard" element={<AdminDashboard />} />
+
+
+
 
       </Routes>
     </Router>

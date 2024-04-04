@@ -29,7 +29,7 @@ const Header = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ms-auto">
-                <Nav.Link as={Link} to="/Home">
+                <Nav.Link as={Link} to="/Homepage">
                   Home
                 </Nav.Link>
                 <Nav.Link as={Link} to="/about">
@@ -46,7 +46,7 @@ const Header = () => {
                   Recipes
                 </Nav.Link>
                 
-                <Nav.Link as={Link} to="/">
+                <Nav.Link as={Link} to="/Cartpage">
                   <div className="cart">
                     <i class="bi bi-bag fs-5"></i>
                     <em className="roundpoint">2</em>
