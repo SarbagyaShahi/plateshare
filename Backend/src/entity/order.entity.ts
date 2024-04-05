@@ -12,5 +12,9 @@ export class order extends GlobalEntity{
 
     @Column()
     order_price:number
+    @Column()
+    order_quantity:number
+    @Column()
+    order_location:string 
 
 }

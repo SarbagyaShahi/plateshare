@@ -106,55 +106,56 @@ function Menu() {
         <>
             <Header />
 
-            <section className="menu_section">
-                <Container>
-                    <Row>
-                        <Col lg={{ span: 8, offset: 2 }} className="text-center mb-5">
+            <div className="container">
+                <div className="row">
+                    <div className="col text-center mb-5 mt-5" lg={{ span: 8, offset: 2 }} >
 
-                            <h2>Our Menu</h2>
-                            <p className="para">
-                                This is our menu.Here you  can find the food we can offer in reasonable price.Alsowe have created a folder where you can donate the food.
-                            </p>
-                        </Col>
-                    </Row>
-                  
-                    <Row className="menu-row">
+                        <h2>Our Menu</h2>
+                        <p className="para">
+                            This is our menu.Here you  can find the food we can offer in reasonable price.
+                        </p>
+                    </div>
+                </div>
 
-                        {mockData.map((cardData, index) => (
-                            // <Cards
-                            //     key={index}
-                            //     image={cardData.image}
-                            //     rating={cardData.rating}
-                            //     title={cardData.title}
-                            //     paragraph={cardData.paragraph}
-                            //     price={cardData.price}
-                            // //
-                            //      renderRatingIcons={renderRatingIcons}
-                            // />
-                            <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={cardData.image} width ={'200px'} height={'250px'}/>
+                <div className="row">
+
+                    {mockData.map((cardData, index) => (
+                        // <Cards
+                        //     key={index}
+                        //     image={cardData.image}
+                        //     rating={cardData.rating}
+                        //     title={cardData.title}
+                        //     paragraph={cardData.paragraph}
+                        //     price={cardData.price}
+                        // //
+                        //      renderRatingIcons={renderRatingIcons}
+                        // />
+
+                        <div className="col">
+                            <Card style={{ width: '18rem' }} className="mb-4">
+                                <Card.Img variant="top" src={cardData.image} width={'200px'} height={'250px'} />
                                 <Card.Body>
                                     <Card.Title>{cardData.title}</Card.Title>
                                     <Card.Text>
-                                    {cardData.paragraph}
+                                        {cardData.paragraph}
 
                                     </Card.Text>
                                     <Card.Text>
-                                    {cardData.price}
+                                        {cardData.price}
                                     </Card.Text>
                                     <Card.Text>
-                                    {cardData.rating}
+                                        {cardData.rating}
                                     </Card.Text>
                                     <Button variant="primary">Add to cart</Button>
                                 </Card.Body>
                             </Card>
-                        ))}
-                    </Row>
+                        </div>
+                    ))}
+                </div>
 
 
 
-                </Container>
-            </section>
+            </div>
             <Footer />
         </>
     );

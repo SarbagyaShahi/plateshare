@@ -1,6 +1,6 @@
 import { Controller } from "../../lib/bind";
 import { Request,Response } from "express";
-import { Get, Post } from "../../lib/methods";
+import { Delete, Get, Post } from "../../lib/methods";
 import { LoginDto, RegisterDto } from "./auth.dto";
 import { AuthService } from './authservice';
 import { LoginGuard } from "../../guards/role.guard";
@@ -19,6 +19,7 @@ export class AuthController {
         return message
     }
 
+   
     @Post("/login")
     login(req:Request,res:Response){
         let body:LoginDto=req.body
