@@ -38,7 +38,7 @@ export class AuthService {
         let User = await this.user_model.findOne({ where: { User_email: body.email } })
         if (!User)
             throw new UserNotExist("User doesn't exist")
-        if (!verifyHash(body.password, User.User_password))
+        if (verifyHash(body.password, User.User_password))
             throw new CustomError("Password don't match try again", 400)
         //set token in cookie
         let token: string

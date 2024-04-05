@@ -5,10 +5,13 @@ import { DataSource } from "typeorm"
 import { AppDataStore } from "./data-source"
 import * as dotenv from "dotenv"
 import { AuthController } from "./routes/auth/auth.controller"
+import { OrderController } from "./routes/Order/Order.controller"
 
 dotenv.config()
 const bspApplication=new BspApplication(express(),[ 
-    new AuthController()
+    new AuthController(),
+    new OrderController()
+    
 ])
 const app=bspApplication.getApplication()
 app.use("/public",express.static("./public"))

@@ -4,7 +4,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Table from 'react-bootstrap/Table';
 
-export default function Cartpage() {
+export default function Cartpage({cartData}) {
+
   return (
 
     <div>
@@ -14,6 +15,7 @@ export default function Cartpage() {
         <thead>
           <tr>
             <th>ID</th>
+            
             <th>Name of Products</th>
             <th>Price</th>
             <th>Quantity</th>
@@ -22,13 +24,20 @@ export default function Cartpage() {
         </thead>
 
         <tbody>
-          <tr>
+          {/* Console.log(cartData)
+          {cartData.map(item => (
+            <tr key={item.id}>
+              <td>{item.productId}</td>
+              <td>{item.name}</td>
+            </tr> */}
+            {/* ))} */}
+          {/* <tr>
             <td>1</td>
             <td>Name here</td>
             <td>Price here</td>
             <td>Quantity here</td>
             <td>Amount here</td>
-          </tr>
+          </tr> */}
         </tbody>
       </Table>
 

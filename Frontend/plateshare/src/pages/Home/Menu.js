@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 // import Image1 from "../../Assets/menu/1.jpg";
 import Image2 from "../../Assets/menu/2.jpg";
@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 import Button from 'react-bootstrap/Button';
 import Footer from "../../components/Footer";
-
+import Cart from "./Cartpage";
 import Card from 'react-bootstrap/Card';
 
 const mockData = [
@@ -87,6 +87,8 @@ const mockData = [
 const renderRatingIcons = (rating) => {
     const stars = [];
 
+    
+
     for (let i = 0; i < 5; i++) {
         if (rating > 0.5) {
             stars.push(<i key={i} className="bi bi-star-fill"></i>);
@@ -102,9 +104,15 @@ const renderRatingIcons = (rating) => {
 };
 
 function Menu() {
+    const [cart,setCart]=useState([])
+    console.log(cart)
+    function addToCart(data){
+        setCart([...cart,data])
+    }
     return (
         <>
             <Header />
+            <Cart  cartData={cart}/>
 
             <div className="container">
                 <div className="row">
@@ -146,7 +154,7 @@ function Menu() {
                                     <Card.Text>
                                         {cardData.rating}
                                     </Card.Text>
-                                    <Button variant="primary">Add to cart</Button>
+                                    <Button onClick={()=>addToCart(cardData)} variant="primary">Add to cart</Button>
                                 </Card.Body>
                             </Card>
                         </div>

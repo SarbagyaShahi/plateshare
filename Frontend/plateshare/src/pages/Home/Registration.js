@@ -83,12 +83,12 @@ function Registration() {
 
               <MDBCol md='6'>
                 <label>First Name</label>
-                <MDBInput wrapperClass='mb-4' size='lg' id='form1' type='text' placeholder='Enter Your First Name' value={first_name} onChange={(e) => setfirst_name(e.target.value)} />
+                <MDBInput required wrapperClass='mb-4' size='lg' id='form1' type='text' placeholder='Enter Your First Name' value={first_name} onChange={(e) => setfirst_name(e.target.value)} />
               </MDBCol>
 
               <MDBCol md='6'>
                 <label>Last Name</label>
-                <MDBInput wrapperClass='mb-4' size='lg' id='form2' type='text' placeholder='Enter Your Last Name' value={last_name} onChange={(e) => setlast_name(e.target.value)} />
+                <MDBInput required wrapperClass='mb-4' size='lg' id='form2' type='text' placeholder='Enter Your Last Name' value={last_name} onChange={(e) => setlast_name(e.target.value)} />
               </MDBCol>
 
             </MDBRow>
@@ -97,12 +97,12 @@ function Registration() {
 
               <MDBCol md='6'>
                 <label>Email</label>
-                <MDBInput wrapperClass='mb-4' size='lg' id='form3' placeholder='Enter Your Email' value={email} onChange={(e) => setemail(e.target.value)} />
+                <MDBInput required wrapperClass='mb-4' size='lg' id='form3' placeholder='Enter Your Email' value={email} onChange={(e) => setemail(e.target.value)} />
               </MDBCol>
 
               <MDBCol md='6'>
                 <label>Phone</label>
-                <MDBInput wrapperClass='mb-4' size='lg' id='form3' type='number' placeholder='Enter Your Phone' value={number} onChange={(e) => setnumber(e.target.value)} />
+                <MDBInput required wrapperClass='mb-4' size='lg' id='form3' type='number' placeholder='Enter Your Phone' value={number} onChange={(e) => setnumber(e.target.value)} />
               </MDBCol>
 
             </MDBRow>
@@ -111,7 +111,7 @@ function Registration() {
 
               <MDBCol md='6'>
                 <label>Address</label>
-                <MDBInput wrapperClass='mb-4' size='lg' id='form4' type='text' placeholder='Enter Your Address' value={address} onChange={(e) => setaddress(e.target.value)} />
+                <MDBInput required wrapperClass='mb-4' size='lg' id='form4' type='text' placeholder='Enter Your Address' value={address} onChange={(e) => setaddress(e.target.value)} />
               </MDBCol>
 
 
@@ -122,12 +122,12 @@ function Registration() {
 
               <MDBCol md='6'>
                 <label>Password</label>
-                <MDBInput wrapperClass='mb-4' size='lg' id='form4' type='password' placeholder='Enter Your Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                <MDBInput required wrapperClass='mb-4' size='lg' id='form4' type='password' placeholder='Enter Your Password' value={password} onChange={(e) => setPassword(e.target.value)} />
               </MDBCol>
 
               <MDBCol md='6'>
                 <label>Confirm Password</label>
-                <MDBInput wrapperClass='mb-4' size='lg' id='form5' type='password' placeholder='Enter Your Password' value={confirmPassword} onChange={(e) => setconfirmPassword(e.target.value)} />
+                <MDBInput required wrapperClass='mb-4' size='lg' id='form5' type='password' placeholder='Enter Your Password' value={confirmPassword} onChange={(e) => setconfirmPassword(e.target.value)} />
               </MDBCol>
 
             </MDBRow>
