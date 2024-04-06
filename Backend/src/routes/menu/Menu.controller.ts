@@ -1,33 +1,31 @@
 import { Controller } from "../../lib/bind"
-import { Delete, Get, Post } from "../../lib/methods"
+import { Delete, Get, Post, Put } from "../../lib/methods"
 import { AuthorizedRequest } from "../../typings/base.type"
-import { postService } from "./post.service"
+import { menuService } from "./Menu.service"
 
-
-@Controller("/post")
-export class  PostController {  
+@Controller("/Menu")
+export class  MenuController {  
     constructor(
-        private service=new postService()
+        private service=new menuService()
     ) {
     }
 
-    @Post("/create_post")
+    @Post("/create_menu")
     async create (req:AuthorizedRequest){
         let body =req.body
-        let message=this.service.createpost(body)
+        let message=this.service.createmenu(body)
         return message
     }
-    @Get("/get_post")
+    @Get("/get_menu")
     async read (req:AuthorizedRequest){
         let body =req.body
-        let message=this.service.getposts(body)
+        let message=this.service.getmenus(body)
         return message
     }
-    @Delete("/delete_post")
+    @Delete("/delete_menu")
     async Delete (req:AuthorizedRequest){
         let body =req.body
-        let message=this.service.Deleteposts(body)
+        let message=this.service.Deletemenus(body)
         return message
     }
 }
-

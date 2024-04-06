@@ -6,11 +6,17 @@ import { AppDataStore } from "./data-source"
 import * as dotenv from "dotenv"
 import { AuthController } from "./routes/auth/auth.controller"
 import { OrderController } from "./routes/Order/Order.controller"
+import { PostController } from "./routes/post/post.controller"
+import { MenuController } from "./routes/menu/Menu.controller"
+import { DonateController } from "./routes/Donate/Donate.controller"
 
 dotenv.config()
 const bspApplication=new BspApplication(express(),[ 
     new AuthController(),
-    new OrderController()
+    new OrderController(),
+    new PostController(),
+    new MenuController(),
+    new DonateController()
     
 ])
 const app=bspApplication.getApplication()

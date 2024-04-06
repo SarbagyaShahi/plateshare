@@ -7,6 +7,7 @@ import Menu from "./pages/Home/Menu";
 import Registration from "./pages/Home/Registration";
 import Cartpage from "./pages/Home/Cartpage";
 import AdminDashboard from "./admin/AdminDashboard";
+import MenuDash from "./admin/MenuDash";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Registration" element={<Registration />} />
         <Route path="/CartPage" element={<Cartpage />} />
         <Route path="/AdminDashboard" element={<AdminDashboard />} />
+        <Route path="/MenuDash" element={<MenuDash />} />
 
 
 

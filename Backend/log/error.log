@@ -177,3 +177,15 @@ Error: data and hash arguments required
 
 ----------------------------------------------------------------------------------------------------
 
+-----------------------------------/delete_post 2024/3/6 11:23:14-----------------------------------
+
+SubjectWithoutIdentifierError: Internal error. Subject post must have an identifier to perform operation.
+    at C:\Users\dell\Desktop\platesharee\Backend\src\persistence\SubjectExecutor.ts:689:27
+    at Array.map (<anonymous>)
+    at SubjectExecutor.executeRemoveOperations (C:\Users\dell\Desktop\platesharee\Backend\src\persistence\SubjectExecutor.ts:687:41)
+    at SubjectExecutor.execute (C:\Users\dell\Desktop\platesharee\Backend\src\persistence\SubjectExecutor.ts:156:20)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at EntityPersistExecutor.execute (C:\Users\dell\Desktop\platesharee\Backend\src\persistence\EntityPersistExecutor.ts:182:21)
+
+----------------------------------------------------------------------------------------------------
+

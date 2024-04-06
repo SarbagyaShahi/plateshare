@@ -4,20 +4,14 @@ import { Role } from '../typings/base.type';
 import { ImageField } from '../lib/imageHandler';
 
 @Entity()
-export class menu extends GlobalEntity{
+export class article extends GlobalEntity {
     @Column()
-    menu_name:string
+    article_topic: string
 
     @Column()
-    menu_type:string
-    
-
+    article_description: string
+     
     @Column()
-    menu_price:number
-    @Column()
-    
-    menu_rating:number
-    
-
+    article_publisheddate: Date
 
 }

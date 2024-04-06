@@ -31,7 +31,7 @@ export class OrderService {
         orders.order_quantity = Delete.order_quantity;
         orders.order_type = Delete.order_type;
         await this.order_model.create(orders)
-        return ('order is created')
+        return ('order is deleted')
     }
     // async register(data: RegisterDto) {
     //     console.log(data)

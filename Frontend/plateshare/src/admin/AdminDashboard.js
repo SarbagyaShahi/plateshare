@@ -11,7 +11,8 @@ function AdminDashboard () {
                 <ul className="sidebar-menu">
                     <li><a href="#" className='active'>Dashboard</a></li>
                     <li><a href="/order">Order</a></li>
-                    <li><a href="/menu">Menu </a></li>
+                    <li><a href="#">User List</a></li>
+                    <li><a href="/MenuDash">Menu </a></li>
                     <li><a href="#">Donations</a></li>
                 
                 </ul>
