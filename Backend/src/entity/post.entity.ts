@@ -8,6 +8,9 @@ export class post extends GlobalEntity {
     post_name: string
 
     @Column()
+    posted_ingredients: string
+
+    @Column()
     post_description: string
 
     @Column()

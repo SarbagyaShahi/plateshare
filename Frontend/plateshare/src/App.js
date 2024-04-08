@@ -8,6 +8,7 @@ import Registration from "./pages/Home/Registration";
 import Cartpage from "./pages/Home/Cartpage";
 import AdminDashboard from "./admin/AdminDashboard";
 import MenuDash from "./admin/MenuDash";
+import Recipe from "./pages/Home/Recipe";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/CartPage" element={<Cartpage />} />
         <Route path="/AdminDashboard" element={<AdminDashboard />} />
         <Route path="/MenuDash" element={<MenuDash />} />
+        <Route path="/Recipe" element={<Recipe />} />
 
 
 

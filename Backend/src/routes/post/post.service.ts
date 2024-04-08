@@ -15,6 +15,7 @@ export class postService {
         let posts = new post()//檢
         posts.post_name = create.post_name;
         posts.post_description = create.post_description;
+        posts.posted_ingredients=create.posted_ingredients;
         posts.posted_by = create.posted_by;
 
         await this.post_model.create(posts)
@@ -28,6 +29,7 @@ export class postService {
         let posts = new post()//檢
         posts.post_name = Delete.post_name;
         posts.post_description = Delete.post_description;
+        posts.posted_ingredients=Delete.posted_ingredients
         posts.posted_by = Delete.posted_by;
 
         await this.post_model.delete(posts)
