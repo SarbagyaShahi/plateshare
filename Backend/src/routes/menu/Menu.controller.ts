@@ -1,5 +1,6 @@
 import { Controller } from "../../lib/bind"
-import { Delete, Get, Post, Put } from "../../lib/methods"
+import { ImageSingle } from "../../lib/imageHandler";
+import { Delete, Get, Post, Put } from '../../lib/methods';
 import { AuthorizedRequest } from "../../typings/base.type"
 import { menuService } from "./Menu.service"
 
@@ -11,6 +12,7 @@ export class  MenuController {
     }
 
     @Post("/create_menu")
+    @ImageSingle("food_image")
     async create (req:AuthorizedRequest){
         let body =req.body
         let message=this.service.createmenu(body)
@@ -22,10 +24,17 @@ export class  MenuController {
         let message=this.service.getmenus(body)
         return message
     }
-    @Delete("/delete_menu")
-    async Delete (req:AuthorizedRequest){
+    @Put("/put_menu")
+    @ImageSingle("food_image")
+    async edit (req:AuthorizedRequest){
         let body =req.body
-        let message=this.service.Deletemenus(body)
+        let message=this.service.Putmenus(body)
         return message
     }
+    // @Delete("/delete_menu")
+    // async Delete (req:AuthorizedRequest){
+    //     let body =req.body
+    //     let message=this.service.deletemenus(body)
+    //     return message
+    // }
 }

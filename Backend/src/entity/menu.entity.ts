@@ -7,6 +7,8 @@ import { ImageField } from '../lib/imageHandler';
 export class menu extends GlobalEntity{
     @Column()
     menu_name:string
+    @Column()
+    menu_Image:string
 
     @Column()
     menu_type:string

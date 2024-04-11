@@ -50,7 +50,7 @@ export class AuthService {
         return { statusCode: 200, message: "Login in successful" }
     }
 
-   
+
 }
 
 

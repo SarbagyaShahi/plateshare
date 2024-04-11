@@ -1,172 +1,92 @@
-import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-// import Image1 from "../../Assets/menu/1.jpg";
-import Image2 from "../../Assets/menu/2.jpg";
-import Image3 from "../../Assets/menu/3.jpg";
-import Image4 from "../../Assets/menu/4.jpg";
-import Image5 from "../../Assets/menu/5.jpg";
-import Image6 from "../../Assets/menu/6.jpg";
-import Image7 from "../../Assets/menu/7.jpg";
-// import Image8 from "../../Assets/menu/burger-18.jpg";
-import Cards from "../../components/Layouts/Card";
-import { Link } from "react-router-dom";
-import Header from "../../components/Header";
+import React from "react";
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Footer from "../../components/Footer";
-import Cart from "./Cartpage";
+import Modal from 'react-bootstrap/Modal';
+import Header from "../../components/Header";
 import Card from 'react-bootstrap/Card';
+import { useEffect } from "react";
 
-const mockData = [
-    // {
-    //     id: "0001",
-    //     image: Image1,
-    //     title: "Keema Noodles",
-    //     paragraph: "This is a delicious chinese noodels",
-    //     rating: 5,
-    //     price: 150,
-    // },
-    {
-        id: "0002",
-        image: Image2,
-        title: "Chicken  Chowmin",
-        paragraph: "A typical nepali khaja which every one loves",
-        rating: 3.5,
-        price: 180,
-    },
-    {
-        id: "0003",
-        image: Image3,
-        title: "Crunchy Burger",
-        paragraph: "A delicious crunchy burger like nothing",
-        rating: 4,
-        price: 250,
-    },
-    {
-        id: "0004",
-        image: Image4,
-        title: "Jhol Momo",
-        paragraph: "Famous delicious Khaja",
-        rating: 3.5,
-        price: 250,
-    },
-    {
-        id: "0005",
-        image: Image5,
-        title: "Keema Noodles",
-        paragraph: "Tibetan dish",
-        rating: 3.0,
-        price: 150,
-    },
-    {
-        id: "0006",
-        image: Image6,
-        title: "Panipuri",
-        paragraph: "A magical combination of the  puri,pani and aalo",
-        rating: 3,
-        price: 80,
-    },
-    {
-        id: "0007",
-        image: Image7,
-        title: "Maghiritta pizza",
-        paragraph: "Pizza for everyone",
-        rating: 5,
-        price: 500,
-    },
-    // {
-    //     id: "0008",
-    //     image: Image8,
-    //     title: "Classic Burger",
-    //     paragraph: "cheddar cheese, ketchup, mustard, pickles, onion",
-    //     rating: 2.0,
-    //     price: 89.12,
-    // },
+import {
+    MDBBtn,
+    MDBContainer,
+    MDBRow,
+    MDBCol,
+    MDBCard,
+    MDBCardBody,
+    MDBInput,
+    MDBTextArea,
+    MDBFile
+}
 
-];
-
-const renderRatingIcons = (rating) => {
-    const stars = [];
-
-    
-
-    for (let i = 0; i < 5; i++) {
-        if (rating > 0.5) {
-            stars.push(<i key={i} className="bi bi-star-fill"></i>);
-            rating--;
-        } else if (rating > 0 && rating < 1) {
-            stars.push(<i key={"half"} className="bi bi-star-half"></i>);
-            rating--;
-        } else {
-            stars.push(<i key={`empty${i}`} className="bi bi-star"></i>);
-        }
-    }
-    return stars;
-};
+    from 'mdb-react-ui-kit';
 
 function Menu() {
-    const [cart,setCart]=useState([])
+    const [cart, setCart] = useState([])
     console.log(cart)
-    function addToCart(data){
-        setCart([...cart,data])
+    function addToCart(data) {
+        setCart([...cart, data])
     }
+
+
+    const [menuList, setmenuList] = useState([])
+    const fetchmenuList = () => {
+        fetch('http://localhost:10000/menu/get_menu')
+            .then(response => response.json())
+            .then(data => {
+                setmenuList(data.data);
+                console.log(menuList)
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+    useEffect(() => {
+        fetchmenuList()
+    }, [])
+
     return (
-        <>
+        <div>
             <Header />
-            <Cart  cartData={cart}/>
+            <div class="container-fluid">
+                <h1>Enjoy Our Menu</h1>
 
-            <div className="container">
-                <div className="row">
-                    <div className="col text-center mb-5 mt-5" lg={{ span: 8, offset: 2 }} >
+                <div class="row justify-content-around ">
+                    {menuList.map((item) => (
+                        <Card style={{ width: '18rem', 'marginBottom': '2rem' }}>
 
-                        <h2>Our Menu</h2>
-                        <p className="para">
-                            This is our menu.Here you  can find the food we can offer in reasonable price.
-                        </p>
-                    </div>
-                </div>
+                            <Card.Body>
+                                <Card.Title>
+                                    {item.menu_name}</Card.Title>
+                                <Card.Text>
+                                    {item.menu_type}
+                                </Card.Text>
+                                <Card.Text>
+                                    {item.menu_price}
+                                </Card.Text>
 
-                <div className="row">
+                                <Card.Text>
+                                    {item.menu_rating}
+                                </Card.Text>
+                                <Card.Text>
+                                    {item.menu_}
+                                </Card.Text>
 
-                    {mockData.map((cardData, index) => (
-                        // <Cards
-                        //     key={index}
-                        //     image={cardData.image}
-                        //     rating={cardData.rating}
-                        //     title={cardData.title}
-                        //     paragraph={cardData.paragraph}
-                        //     price={cardData.price}
-                        // //
-                        //      renderRatingIcons={renderRatingIcons}
-                        // />
 
-                        <div className="col">
-                            <Card style={{ width: '18rem' }} className="mb-4">
-                                <Card.Img variant="top" src={cardData.image} width={'200px'} height={'250px'} />
-                                <Card.Body>
-                                    <Card.Title>{cardData.title}</Card.Title>
-                                    <Card.Text>
-                                        {cardData.paragraph}
-
-                                    </Card.Text>
-                                    <Card.Text>
-                                        {cardData.price}
-                                    </Card.Text>
-                                    <Card.Text>
-                                        {cardData.rating}
-                                    </Card.Text>
-                                    <Button onClick={()=>addToCart(cardData)} variant="primary">Add to cart</Button>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    ))}
+                                <Button variant="primary">Add to Cart</Button>
+                            </Card.Body>
+                        </Card>
+                    )
+                    )
+                    }
                 </div>
 
 
 
             </div>
-            <Footer />
-        </>
-    );
+
+        </div>
+    )
 }
+
 
 export default Menu;

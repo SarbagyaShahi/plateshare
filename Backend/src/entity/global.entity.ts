@@ -7,7 +7,11 @@ import { order } from "./order.entity";
 export class GlobalEntity{
 
     @PrimaryGeneratedColumn()
-    Id:string 
+    Id:string
+
+    
 }
+
+
 
 

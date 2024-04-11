@@ -9,21 +9,22 @@ function MenuDash() {
     const [menu_type, setmenutype] = useState("");
     const [menu_price, setmenuprice] = useState("");
     const [menu_rating, setmenurating] = useState("");
+    const [menu_Image, setmenuImage] = useState("");
 
 
     const handleMenu = async (e) => {
         e.preventDefault();
 
          let formData = new FormData();
-        // formData.append('menu_type', menutype);
-        //     if (roomImage && roomImage.length > 0) {
-        //       formData.append('image', roomImage[0]);
-        //     }
+        formData.append('menuImage', menu_Image);
+            if (menu_Image && menu_Image.length > 0) {
+              formData.append('menuimage', menu_Image[0]);
+            }
         formData.append('menu_price', menu_price);
         formData.append('menu_type', menu_type);
         formData.append('menu_name', menu_name);
         formData.append('menu_rating', menu_rating);
-        //     formData.append('image', roomImage)
+         formData.append('menu_Image', menu_Image);
 
         let addMenu = 'http://localhost:10000/menu/create_menu'
 
@@ -43,6 +44,7 @@ console.log(formData)
             setmenuprice('');
             setmenurating('');
             setmenutype('');
+            setmenuImage('');
 
 
         }
@@ -60,6 +62,9 @@ console.log(formData)
             }
             else if (parsedData.menu_rating) {
                 alert(parsedData.menu_rating);
+            }
+            else if (parsedData.menu_Image) {
+                alert(parsedData. menu_Image);
             }
 
         }
@@ -80,15 +85,16 @@ useEffect(()=>{
     fetchMenuList()
 },[])
     const handleEdit = (Id) => {
-        // fetch(`http://127.0.0.1:8000/book/edit/${Id}/`)
-            // .then(response => response.json())
-            // .then(data => {
-            //     setmenuname(data.menu_name);
-            //     setmenuprice(data.menu_price);
-            //     setmenutype(data.menu_type);
-            //     setmenurating(data.menu_rating);
+        fetch(`http://localhost:10000/menu/put_menu${Id}/`)
+            .then(response => response.json())
+            .then(data => {
+                setmenuname(data.menu_name);
+                setmenuprice(data.menu_price);
+                setmenutype(data.menu_type);
+                setmenurating(data.menu_rating);
+                setmenuImage(data.menu_Image);
 
-            // });
+            });
     }
 
     const handleDelete = (Id) => {
@@ -135,13 +141,13 @@ useEffect(()=>{
                         </div>
                         <div className="mb-3">
                             <label for="formFile" className="form-label">Menu Image</label>
-                            <input className="form-control" type="file" id="formFile"/* onChange={
+                            <input className="form-control" type="file" id="formFile" onChange={
                 (e) => {
                   let file = e.target.files[0];
-                  setRoomImage(file)
+                  setmenuImage(file)
 
                 }
-              }*//>
+              }/>
                         </div>
                     </div>
 
@@ -183,6 +189,7 @@ useEffect(()=>{
                             <th>Menu Type</th>
                             <th>Menu price</th>
                             <th>Menu Rating</th>
+                            <th>Menu Image</th>
 
                             <th colSpan={2}>Action</th>
                         </tr>
@@ -198,6 +205,7 @@ useEffect(()=>{
                                     <td>{menu.menu_type}</td>
                                     <td>{menu.menu_price}</td>
                                     <td>{menu.menu_rating}</td>
+                                    <td>{menu.menu_Image}</td>
                                     <td><Button variant="primary" onClick={handleEdit}>Edit</Button></td>
                                     <td><Button variant="danger" onClick={handleDelete}>Delete</Button></td>
                                 </tr>
