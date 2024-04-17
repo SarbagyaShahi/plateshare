@@ -6,6 +6,4 @@ export interface eventDto {
     event_location?: string,
     event_time?: number,
     event_description?: string
-
-
 }

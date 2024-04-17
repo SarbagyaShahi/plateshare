@@ -196,13 +196,14 @@ function Recipe() {
                 <Card.Title>RecipeName:
                   {item.post_name}</Card.Title>
                 <Card.Text>
-                  {item.post_description}
+                  <Card.Title>Recipe Description</Card.Title>
+                    {item.post_description}
                 </Card.Text>
-                <Card.Text>
+                <Card.Text><Card.Title>Recipe Ingredients</Card.Title>
                   {item.posted_ingredients}
                 </Card.Text>
 
-                <Card.Text>
+                <Card.Text><Card.Title> Posted by</Card.Title>
                   {item.posted_by}
                 </Card.Text>
 

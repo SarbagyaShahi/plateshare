@@ -265,3 +265,35 @@ Error: MimeType or size doesn't match
 
 ----------------------------------------------------------------------------------------------------
 
+-----------------------------------/create_event 2024/3/3 22:32:9-----------------------------------
+
+Error: Multipart: Boundary not found
+    at new Multipart (C:\Users\dell\Desktop\platesharee\Backend\node_modules\busboy\lib\types\multipart.js:233:13)
+    at getInstance (C:\Users\dell\Desktop\platesharee\Backend\node_modules\busboy\lib\index.js:33:12)
+    at module.exports (C:\Users\dell\Desktop\platesharee\Backend\node_modules\busboy\lib\index.js:56:10)
+    at C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:146:30
+    at new Promise (<anonymous>)
+    at ImageHandler.requestImageHandler (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:142:16)
+    at ImageHandler.singleImage (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:54:21)
+    at EventController.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:206:43)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:65:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:46:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/3/3 22:36:22----------------------------------
+
+Error: Multipart: Boundary not found
+    at new Multipart (C:\Users\dell\Desktop\platesharee\Backend\node_modules\busboy\lib\types\multipart.js:233:13)
+    at getInstance (C:\Users\dell\Desktop\platesharee\Backend\node_modules\busboy\lib\index.js:33:12)
+    at module.exports (C:\Users\dell\Desktop\platesharee\Backend\node_modules\busboy\lib\index.js:56:10)
+    at C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:146:30
+    at new Promise (<anonymous>)
+    at ImageHandler.requestImageHandler (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:142:16)
+    at ImageHandler.singleImage (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:54:21)
+    at EventController.<anonymous> (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:206:43)
+    at step (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:65:23)
+    at Object.next (C:\Users\dell\Desktop\platesharee\Backend\src\lib\imageHandler.ts:46:53)
+
+----------------------------------------------------------------------------------------------------
+
