@@ -2,6 +2,7 @@ import { Controller } from "../../lib/bind"
 import { Delete, Get, Post } from "../../lib/methods"
 import { AuthorizedRequest } from "../../typings/base.type"
 import { postService } from "./post.service"
+import { ImageSingle } from '../../lib/imageHandler';
 
 
 @Controller("/post")
@@ -12,8 +13,10 @@ export class  PostController {
     }
 
     @Post("/create_post")
+    @ImageSingle("we")
     async create (req:AuthorizedRequest){
         let body =req.body
+        req.body.we
         let message=this.service.createpost(body)
         return message
     }

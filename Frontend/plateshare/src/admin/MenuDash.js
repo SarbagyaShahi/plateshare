@@ -3,6 +3,8 @@ import '../admin/AdminDashboard.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
+import  Modal  from 'react-bootstrap/Modal';
+
 
 function MenuDash() {
     const [menu_name, setmenuname] = useState("");
@@ -10,21 +12,30 @@ function MenuDash() {
     const [menu_price, setmenuprice] = useState("");
     const [menu_rating, setmenurating] = useState("");
     const [menu_Image, setmenuImage] = useState("");
+    const[modelIsOpen,setModelIsOpen]=useState(true);
+const closeModal =()=>{
+    setModelIsOpen(false);
+
+
+}
+const openModal =(menuList) => {
+    setModelIsOpen(true);
+}
 
 
     const handleMenu = async (e) => {
         e.preventDefault();
 
-         let formData = new FormData();
+        let formData = new FormData();
         formData.append('menuImage', menu_Image);
-            if (menu_Image && menu_Image.length > 0) {
-              formData.append('menuimage', menu_Image[0]);
-            }
+        if (menu_Image && menu_Image.length > 0) {
+            formData.append('menuimage', menu_Image[0]);
+        }
         formData.append('menu_price', menu_price);
         formData.append('menu_type', menu_type);
         formData.append('menu_name', menu_name);
         formData.append('menu_rating', menu_rating);
-         formData.append('menu_Image', menu_Image);
+        formData.append('menu_Image', menu_Image);
 
         let addMenu = 'http://localhost:10000/menu/create_menu'
 
@@ -33,7 +44,7 @@ function MenuDash() {
             body: formData,
             credentials: 'include'
         });
-console.log(formData)
+        console.log(formData)
         let parsedData = await addMenuResponse.json();
         console.log(parsedData);
         console.log(formData)
@@ -64,12 +75,12 @@ console.log(formData)
                 alert(parsedData.menu_rating);
             }
             else if (parsedData.menu_Image) {
-                alert(parsedData. menu_Image);
+                alert(parsedData.menu_Image);
             }
 
         }
     }
-const [menuList,setMenuList]=useState([])
+    const [menuList, setMenuList] = useState([])
     const fetchMenuList = () => {
         fetch('http://localhost:10000/menu/get_menu')
             .then(response => response.json())
@@ -81,9 +92,9 @@ const [menuList,setMenuList]=useState([])
                 console.error('Error:', error);
             });
     }
-useEffect(()=>{
-    fetchMenuList()
-},[])
+    useEffect(() => {
+        fetchMenuList()
+    }, [])
     const handleEdit = (Id) => {
         fetch(`http://localhost:10000/menu/put_menu${Id}/`)
             .then(response => response.json())
@@ -142,12 +153,12 @@ useEffect(()=>{
                         <div className="mb-3">
                             <label for="formFile" className="form-label">Menu Image</label>
                             <input className="form-control" type="file" id="formFile" onChange={
-                (e) => {
-                  let file = e.target.files[0];
-                  setmenuImage(file)
+                                (e) => {
+                                    let file = e.target.files[0];
+                                    setmenuImage(file)
 
-                }
-              }/>
+                                }
+                            } />
                         </div>
                     </div>
 
@@ -206,7 +217,7 @@ useEffect(()=>{
                                     <td>{menu.menu_price}</td>
                                     <td>{menu.menu_rating}</td>
                                     <td>{menu.menu_Image}</td>
-                                    <td><Button variant="primary" onClick={handleEdit}>Edit</Button></td>
+                                    <td><Button variant="primary" onClick={()=>openModal(menuList)}>Edit</Button></td>
                                     <td><Button variant="danger" onClick={handleDelete}>Delete</Button></td>
                                 </tr>
                             ))
@@ -214,6 +225,81 @@ useEffect(()=>{
 
                     </tbody>
                 </Table>
+                <div className="modal">
+                    <Modal show={modelIsOpen} onHide={closeModal}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Edit Room</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <Form>
+                                <Form.Group
+                                    className="mb-3 text-start"
+                                    controlId="formBasicEmail"
+                                >
+                                    <Form.Label>Room Name</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="Enter room name"
+                                        value={menu_rating}
+                                        onChange={(e) => setmenurating(e.target.value)}
+                                    />
+                                </Form.Group>
+                                <Form.Group
+                                    className="mb-3 text-start"
+                                    controlId="formBasicEmail"
+                                >
+                                    <Form.Label>Room Price</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="Enter room price"
+                                        value={menu_type}
+                                        onChange={(e) => setmenutype(e.target.value)}
+                                    />
+                                </Form.Group>
+                                <Form.Group
+                                    className="mb-3 text-start"
+                                    controlId="formBasicEmail"
+                                >
+                                    <Form.Label>Room Capacity</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="Enter room capacity"
+                                        value={menu_rating}
+                                        onChange={(e) => setmenurating(e.target.value)}
+                                    />
+                                </Form.Group>
+                                <Form.Group
+                                    className="mb-3 text-start"
+                                    controlId="formBasicEmail"
+                                >
+                                    <Form.Label>Room No.</Form.Label>
+                                    <Form.Control
+                                        type="number"
+                                        placeholder="Enter room number"
+                                        value={menu_price}
+                                        onChange={(e) => setmenuprice(e.target.value)}
+                                    />
+                                </Form.Group>
+                                <Form.Group
+                                    className="mb-3 text-start"
+                                    controlId="formBasicEmail"
+                                >
+                                    <Form.Label>Menu</Form.Label>
+                                    <Form.Control
+                                        as="textarea"
+                                        rows={3}
+                                        placeholder="Enter room description"
+                                        value={menu_name}
+                                        onChange={(e) => setmenuname(e.target.value)}
+                                    />
+                                </Form.Group>
+                                <Button variant="primary" onClick={handleEdit}>
+                                    Update Menu
+                                </Button>
+                            </Form>
+                        </Modal.Body>
+                    </Modal>
+                </div>
             </div>
         </div>
     );

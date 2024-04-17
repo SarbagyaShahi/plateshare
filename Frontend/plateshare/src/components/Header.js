@@ -47,8 +47,11 @@ const Header = () => {
               </Nav.Link>
 
               <Nav.Link as={Link} to="/Cartpage">
-                Cart
+                <i className="fa fa-shopping-cart"></i> 
               </Nav.Link>
+
+
+
               <Nav.Link as={Link} to="/Login">
                 Login
               </Nav.Link>

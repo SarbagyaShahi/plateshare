@@ -31,10 +31,10 @@ export class  MenuController {
         let message=this.service.Putmenus(body)
         return message
     }
-    // @Delete("/delete_menu")
-    // async Delete (req:AuthorizedRequest){
-    //     let body =req.body
-    //     let message=this.service.deletemenus(body)
-    //     return message
-    // }
+    @Delete("/delete_menu")
+    async Delete (req:AuthorizedRequest){
+        let body =req.body
+        let message=this.service.Deletemenus(body)
+        return message
+    }
 }

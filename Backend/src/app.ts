@@ -9,6 +9,7 @@ import { OrderController } from "./routes/Order/Order.controller"
 import { PostController } from "./routes/post/post.controller"
 import { MenuController } from "./routes/menu/Menu.controller"
 import { DonateController } from "./routes/Donate/Donate.controller"
+import { ArticleController } from './routes/Article/article.controller';
 
 dotenv.config()
 const bspApplication=new BspApplication(express(),[ 
@@ -16,7 +17,8 @@ const bspApplication=new BspApplication(express(),[
     new OrderController(),
     new PostController(),
     new MenuController(),
-    new DonateController()
+    new DonateController(),
+    new ArticleController()
     
 ])
 const app=bspApplication.getApplication()

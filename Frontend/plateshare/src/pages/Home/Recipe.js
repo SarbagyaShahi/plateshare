@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import Modal from "react-bootstrap/Modal";
+
 import Header from "../../components/Header";
 import Card from 'react-bootstrap/Card';
 import { useEffect } from "react";
@@ -19,7 +20,70 @@ import {
 }
 
   from 'mdb-react-ui-kit';
+
 function Recipe() {
+  const [post_name, setpostname] = useState("");
+  const [posted_ingredients, setpostedingredients] = useState("");
+  const [posted_by, setpostedby] = useState("");
+  const [post_description, setpostdescription] = useState("");
+
+  const handlePost = async (e) => {
+    e.preventDefault();
+
+
+    let formData = new FormData();
+
+    formData.append(' post_name', post_name);
+    formData.append('posted_ingredients', posted_ingredients);
+    formData.append('post_description', post_description);
+    formData.append(' posted_by', posted_by);
+
+
+    let addPost = 'http://localhost:10000/post/create_post'
+
+    let addPostResponse = await fetch(addPost, {
+      method: 'POST',
+      body: formData,
+      credentials: 'include'
+    });
+    console.log(formData)
+    let parsedData = await addPostResponse.json();
+    console.log(parsedData);
+    console.log(formData)
+
+    if (addPostResponse.status === 201) {
+      alert('Recipe Posted successfully');
+      setpostname('');
+      setpostedingredients('');
+      setpostdescription('');
+      setpostedby('');
+
+
+
+    }
+
+    else {
+      if (parsedData.post_name) {
+        alert(parsedData.post_name);
+      }
+
+      else if (parsedData.posted_ingredients) {
+        alert(parsedData.posted_ingredients);
+      }
+      else if (parsedData.post_description) {
+        alert(parsedData.post_description);
+      }
+      else if (parsedData.posted_by) {
+        alert(parsedData.posted_by);
+      }
+
+
+    }
+  }
+
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
   const [recipeList, setRecipeList] = useState([])
   const fetchRecipeList = () => {
@@ -36,10 +100,16 @@ function Recipe() {
   useEffect(() => {
     fetchRecipeList()
   }, [])
+
+
+
   return (
+
     <div>
 
+
       <Header />
+
 
 
 
@@ -55,12 +125,12 @@ function Recipe() {
 
                 <MDBRow className='align-items-center pt-4 pb-3'>
 
-                  <MDBCol md='3' className='ps-5'>
+                  <MDBCol md='3' className='ps-5'  >
                     <h6 className="mb-0">Recipe Name</h6>
                   </MDBCol>
 
                   <MDBCol md='9' className='pe-5'>
-                    <MDBInput size='lg' id='form1' type='text' />
+                    <MDBInput size='lg' id='form1' type='text' value={post_name} onChange={(e) => setpostname(e.target.value)} />
                   </MDBCol>
 
                 </MDBRow>
@@ -68,12 +138,12 @@ function Recipe() {
                 <hr className="mx-n3" />
                 <MDBRow className='align-items-center pt-4 pb-3'>
 
-                  <MDBCol md='3' className='ps-5'>
+                  <MDBCol md='3' className='ps-5' >
                     <h6 className="mb-0">Recipe Ingredients</h6>
                   </MDBCol>
 
                   <MDBCol md='9' className='pe-5'>
-                    <MDBInput size='lg' id='form1' type='text' />
+                    <MDBInput size='lg' id='form1' type='text' value={posted_ingredients} onChange={(e) => setpostedingredients(e.target.value)} />
                   </MDBCol>
 
                 </MDBRow>
@@ -82,12 +152,12 @@ function Recipe() {
 
                 <MDBRow className='align-items-center pt-4 pb-3'>
 
-                  <MDBCol md='3' className='ps-5'>
+                  <MDBCol md='3' className='ps-5' >
                     <h6 className="mb-0">Posted By:</h6>
                   </MDBCol>
 
                   <MDBCol md='9' className='pe-5'>
-                    <MDBInput size='lg' id='form2' type='email' />
+                    <MDBInput size='lg' id='form2' type='email' value={posted_by} onChange={(e) => setpostedby(e.target.value)} />
                   </MDBCol>
 
                 </MDBRow>
@@ -96,21 +166,18 @@ function Recipe() {
 
                 <MDBRow className='align-items-center pt-4 pb-3'>
 
-                  <MDBCol md='3' className='ps-5'>
+                  <MDBCol md='3' className='ps-5' >
                     <h6 className="mb-0">Recipe Description:</h6>
                   </MDBCol>
 
                   <MDBCol md='9' className='pe-5'>
-                    <MDBTextArea id='textAreaExample' rows={3} />
+                    <MDBTextArea id='textAreaExample' rows={3} value={post_description} onChange={(e) => setpostdescription(e.target.value)} />
                   </MDBCol>
 
                 </MDBRow>
 
 
-
-
-
-                <MDBBtn className='my-4' size='lg'>Post Recipe</MDBBtn>
+                <MDBBtn className='my-4' size='lg' onClick={handlePost}>Post Recipe</MDBBtn>
 
               </MDBCardBody>
             </MDBCard>
@@ -122,30 +189,30 @@ function Recipe() {
 
       <div class="container-fluid">
         <div class="row justify-content-around ">
-        {recipeList.map((item) => (
-          <Card style={{ width: '18rem','marginBottom':'2rem' }}>
+          {recipeList.map((item) => (
+            <Card style={{ width: '18rem', 'marginBottom': '2rem' }}>
 
-            <Card.Body>
-              <Card.Title>RecipeName: 
-                {item.post_name}</Card.Title>
-              <Card.Text>
-                {item.post_description}
-              </Card.Text>
-              <Card.Text>
-                {item.posted_ingredients}
-              </Card.Text>
+              <Card.Body>
+                <Card.Title>RecipeName:
+                  {item.post_name}</Card.Title>
+                <Card.Text>
+                  {item.post_description}
+                </Card.Text>
+                <Card.Text>
+                  {item.posted_ingredients}
+                </Card.Text>
 
-              <Card.Text>
-                {item.posted_by}
-              </Card.Text>
+                <Card.Text>
+                  {item.posted_by}
+                </Card.Text>
 
 
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        )
-        )
-        }
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+          )
+          )
+          }
         </div>
 
 

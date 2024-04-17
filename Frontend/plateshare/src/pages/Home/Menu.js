@@ -72,7 +72,7 @@ function Menu() {
                                 </Card.Text>
 
 
-                                <Button variant="primary">Add to Cart</Button>
+                                <Button variant="primary" onClick={()=>{addToCart()}}>Add to Cart</Button>
                             </Card.Body>
                         </Card>
                     )
@@ -87,6 +87,7 @@ function Menu() {
         </div>
     )
 }
+
 
 
 export default Menu;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/Home/About";
@@ -10,25 +10,32 @@ import AdminDashboard from "./admin/AdminDashboard";
 import MenuDash from "./admin/MenuDash";
 import Recipe from "./pages/Home/Recipe";
 
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import NgoDashboard from "./Ngo/NgoDashboard";
+
+
+
 function App() {
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        < Route path="/Login" element={<Login />} />
-        <Route path="/Menu" element={<Menu />} />
-        <Route path="/Registration" element={<Registration />} />
-        <Route path="/CartPage" element={<Cartpage  />} />
-        <Route path="/AdminDashboard" element={<AdminDashboard />} />
-        <Route path="/MenuDash" element={<MenuDash />} />
-        <Route path="/Recipe" element={<Recipe />} />
+    
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          < Route path="/Login" element={<Login />} />
+          <Route path="/Menu" element={<Menu />} />
+          <Route path="/Registration" element={<Registration />} />
+          <Route path="/CartPage" element={<Cartpage />} />
+          <Route path="/AdminDashboard" element={<AdminDashboard />} />
+          <Route path="/MenuDash" element={<MenuDash />} />
+          <Route path="/Recipe" element={<Recipe />} />
+          <Route path="/NgoDashboard" element={<NgoDashboard />} />
+        </Routes>
+      </Router>
+ 
 
-
-
-
-      </Routes>
-    </Router>
   );
 }
 

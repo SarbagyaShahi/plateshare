@@ -28,7 +28,7 @@ class GlobalStore{
     }
 
     private _validate_staff_token=(token:string):Token=>{
-        let validate=jwt.verify(token,this.token_secret) as Token
+        let validate=jwt.verify(token,this.staff_token_secret) as Token
         return validate
     }
 

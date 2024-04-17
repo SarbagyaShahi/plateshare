@@ -1,0 +1,50 @@
+.App {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    padding-top: 56px;
+    background-color: #A79277;
+    color: #fff;
+}
+
+.sidebar-heading {
+    padding: 10px 20px;
+}
+
+.sidebar-menu {
+    padding: 10px 20px;
+}
+
+.sidebar-menu a {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.sidebar-menu a:hover {
+    background-color: #555;
+}
+
+/* Content */
+.content {
+    margin: 2rem 0 3rem 275px;
+    padding: 20px;
+}
+
+.active {
+    background-color: #555;
+}
+
+.content>Form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

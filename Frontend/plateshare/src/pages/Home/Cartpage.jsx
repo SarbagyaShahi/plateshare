@@ -10,6 +10,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Table from 'react-bootstrap/Table';
 
+
 export default function Cartpage({ cartData }) {
   const mapRef = useRef(null);
   const [location, setLocation] = useState([27.70770481291534, 85.32522362345625]);
@@ -49,10 +50,13 @@ export default function Cartpage({ cartData }) {
     }
   }, [onLocationChange]);
 
+
+
   return (
 
     <div>
       <Header />
+      
 
       <Table responsive style={{ 'marginTop': '5rem' }}>
         <thead>
