@@ -1,7 +1,7 @@
 import { Controller } from "../../lib/bind";
 import { Request,Response } from "express";
 import { Delete, Get, Post } from "../../lib/methods";
-import { LoginDto, RegisterDto } from "./auth.dto";
+import { LoginDto, RegisterDto, register_schema, login_schema } from './auth.dto';
 import { AuthService } from './authservice';
 import { LoginGuard, LoginStaff } from "../../guards/role.guard";
 
@@ -14,7 +14,7 @@ export class AuthController {
 
     @Post("/register")
     async register(req:Request){
-        let body:RegisterDto=req.body
+        let body:RegisterDto=register_schema.validateSync(req.body)
         let message=this.service.register(body)
         return message
     }
@@ -29,7 +29,7 @@ export class AuthController {
    
     @Post("/login")
     login(req:Request,res:Response){
-        let body:LoginDto=req.body
+        let body:LoginDto=login_schema.validateSync(req.body)
         let message=this.service.login(body,res)
         return message
 

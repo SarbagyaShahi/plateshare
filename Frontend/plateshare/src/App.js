@@ -10,7 +10,6 @@ import AdminDashboard from "./admin/AdminDashboard";
 import MenuDash from "./admin/MenuDash";
 import Recipe from "./pages/Home/Recipe";
 import NgoArticle from "./Ngo/NgoArticle";
-import Cart from './components/Recipe'
 
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -35,7 +34,7 @@ function App() {
           <Route path="/Recipe" element={<Recipe />} />
           <Route path="/NgoDashboard" element={<NgoDashboard />} />
           <Route path="/NgoArticle" element={<NgoArticle />} />
-          <Route path="/Cart" element={<Cart />} />
+         
         </Routes>
       </Router>
  
