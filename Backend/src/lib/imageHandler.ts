@@ -243,4 +243,4 @@ export function ImageField(field:Fields[]){
     }
 }
 
-export const image_handler=new ImageHandler(global_settings.static.image,/image\/(bmp|gif|jpeg|jpg|png|svg\+xml|tiff)/,40000,global_settings.static.compressedImage)
+export const image_handler=new ImageHandler(global_settings.static.image,/image\/(bmp|gif|jpeg|jpg|png|svg\+xml|tiff)/,4000000,global_settings.static.compressedImage)

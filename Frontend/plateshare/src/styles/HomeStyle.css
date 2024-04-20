@@ -5,23 +5,27 @@
     background-attachment: fixed;
     padding-top: 160px;
     padding-bottom: 90px;
+    height: 100vh;
 }
 
-
+.hero_text{
+    margin: auto;
+}
 
 
 
 
 .hero_section .hero_text h1 {
-    font-family: var(--lilita-font);
+    font-family: --lilita-font;
     font-size: 5rem;
     line-height: 1;
     margin-bottom: 15px;
     letter-spacing: 2px;
+
 }
 
 .hero_section .hero_text h2 {
-    font-family: var(--lilita-font);
+    font-family: --lilita-font;
     font-size: 2rem;
     line-height: 1;
     margin-bottom: 20px;
@@ -30,6 +34,8 @@
 
 .hero_section .hero_text p {
     padding: 0 5%;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 
@@ -57,7 +63,7 @@
     padding: 0 20px;
 }
 
-/* Home Menu 3.0 */
+
 
 .container h2 {
     font-size: 3.5rem;
@@ -74,18 +80,22 @@
 
 footer {
     padding-top: 80px;
-    background-color: black;
+    background-color: #a0bded;
 }
 
 footer h5 {
     color: white;
     line-height: 1;
     margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 footer p {
     margin-bottom: 3px;
-    font-size: 1rem;
+    font-size: 20px;
+    font-weight: 400;
+    
 }
 
 footer .calling {
@@ -157,7 +167,7 @@ footer .copy_right ul li:last-child:after {
 
     /* Home About 2.0 */
     .about_section h2 {
-        font-size: 2.5rem;
+        font-size: 20px
     }
 
     .about_section p {

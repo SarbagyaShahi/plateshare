@@ -329,3 +329,318 @@ Error: Multipart: Boundary not found
 
 ----------------------------------------------------------------------------------------------------
 
+-----------------------------------/create_menu 2024/3/5 10:53:52-----------------------------------
+
+Error: MimeType or size doesn't match
+    at new FileSizeExceed (/Users/sarbagyashahi/fyp/plateshare/Backend/src/middleware/error.middleware.ts:57:14)
+    at FileStream.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/imageHandler.ts:157:43)
+    at FileStream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/3/5 11:13:51----------------------------------
+
+QueryFailedError: Field 'event_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2024/3/5 11:14:0-----------------------------------
+
+QueryFailedError: Field 'event_location' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/3/5 11:14:12----------------------------------
+
+QueryFailedError: Field 'event_time' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/3/5 11:14:21----------------------------------
+
+QueryFailedError: Out of range value for column 'event_time' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/3/5 11:14:25----------------------------------
+
+QueryFailedError: Incorrect integer value: 'asdsad' for column `plateshare`.`event`.`event_time` at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2024/3/5 11:15:1-----------------------------------
+
+QueryFailedError: Field 'event_description' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 12:23:41-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 12:24:26-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 12:26:8-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 12:33:19-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 12:34:0-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 12:34:35-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 13:4:24-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 15:42:10-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 15:44:3-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 15:44:31-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 15:44:48-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 15:45:27-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/3/5 15:46:2-----------------------------------
+
+QueryFailedError: Field 'post_name' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+

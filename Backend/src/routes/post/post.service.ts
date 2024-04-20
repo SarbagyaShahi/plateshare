@@ -11,7 +11,6 @@ export class postService {
         private post_model = new postModel()
     ) { }
     async createpost(create: postDto) {
-        //   let order_name= await this.order_model.findOne({where:{ordername : create.ordername}}); 
         let posts = new post()//檢
         posts.post_name = create.post_name;
         posts.post_description = create.post_description;

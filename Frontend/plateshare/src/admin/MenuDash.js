@@ -109,7 +109,8 @@ const openModal =(menuList) => {
     }
 
     const handleDelete = (Id) => {
-        fetch(`http://localhost:10000/menu/delete_menu${Id}/`, {
+        console.log(Id)
+        fetch(`http://localhost:10000/menu/delete_menu?id=${Id}/`, {
             method: 'DELETE',
         })
             .then(response => {
@@ -216,9 +217,9 @@ const openModal =(menuList) => {
                                     <td>{menu.menu_type}</td>
                                     <td>{menu.menu_price}</td>
                                     <td>{menu.menu_rating}</td>
-                                    <td>{menu.menu_Image}</td>
+                                    <td><img width={100} src={`http://localhost:10000/public/images/${menu.menu_Image}`}/></td>
                                     <td><Button variant="primary" onClick={()=>openModal(menuList)}>Edit</Button></td>
-                                    <td><Button variant="danger" onClick={handleDelete}>Delete</Button></td>
+                                    <td><Button variant="danger" onClick={()=>handleDelete(menu.Id)}>Delete</Button></td>
                                 </tr>
                             ))
                         }

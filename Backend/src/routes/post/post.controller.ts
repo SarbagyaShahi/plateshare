@@ -16,7 +16,7 @@ export class  PostController {
     @ImageSingle("we")
     async create (req:AuthorizedRequest){
         let body =req.body
-        req.body.we
+        console.log(req.body)
         let message=this.service.createpost(body)
         return message
     }

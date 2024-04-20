@@ -1,6 +1,7 @@
 import { Controller } from "../../lib/bind"
 import { ImageSingle } from "../../lib/imageHandler";
 import { Delete, Get, Post, Put } from '../../lib/methods';
+import { InvalidInputError } from "../../middleware/error.middleware";
 import { AuthorizedRequest } from "../../typings/base.type"
 import { menuService } from "./Menu.service"
 
@@ -12,7 +13,7 @@ export class  MenuController {
     }
 
     @Post("/create_menu")
-    @ImageSingle("food_image")
+    @ImageSingle("menu_Image")
     async create (req:AuthorizedRequest){
         let body =req.body
         let message=this.service.createmenu(body)
@@ -33,8 +34,10 @@ export class  MenuController {
     }
     @Delete("/delete_menu")
     async Delete (req:AuthorizedRequest){
-        let body =req.body
-        let message=this.service.Deletemenus(body)
+        let param:{id?:string} =req.query
+        if(!param.id)
+                throw new InvalidInputError("No id found")
+        let message=this.service.Deletemenus(param.id)
         return message
     }
 }

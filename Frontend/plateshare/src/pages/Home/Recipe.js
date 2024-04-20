@@ -33,10 +33,10 @@ function Recipe() {
 
     let formData = new FormData();
 
-    formData.append(' post_name', post_name);
+    formData.append('post_name', post_name);
     formData.append('posted_ingredients', posted_ingredients);
     formData.append('post_description', post_description);
-    formData.append(' posted_by', posted_by);
+    formData.append('posted_by', posted_by);
 
 
     let addPost = 'http://localhost:10000/post/create_post'

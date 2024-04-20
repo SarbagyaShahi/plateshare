@@ -2,6 +2,7 @@ import { menu } from '../../entity/menu.entity';
 import { menuModel } from '../../model/menu.model';
 import { menuDto } from './Menu.dto';
 import { Post, Get, Put } from '../../lib/methods';
+import { InvalidInputError } from '../../middleware/error.middleware';
 
 export class menuService {
     constructor(
@@ -36,13 +37,10 @@ export class menuService {
         await this.menu_model.save(menus)
         return ('menu is edited')
     }
-    async Deletemenus(Delete: menuDto) {
-        let menus = new menu()//檢
-        menus.menu_name = Delete.menu_name;
-        menus.menu_type = Delete.menu_type;
-        menus.menu_price = Delete.menu_price;
-        menus.menu_rating = Delete.menu_rating;
-
+    async Deletemenus(Delete: string) {
+        let menus = await this.menu_model.findOne({where:{Id:Delete}})
+        if(!menus)
+            throw new InvalidInputError("No id found")
         await this.menu_model.delete(menus)
         return ('menu is deleted')
     }

@@ -4,7 +4,7 @@ dotenv.config({})
 
 export const global_settings={
     mail:{
-        from:"abiral@nestnepal.com.np",
+        from:"sarbagyashahi894@gmail.com.np",
         username:process.env.MAIL_USERNAME,
         password:process.env.MAIL_PASSWORD,
         host:process.env.MAIL_HOST

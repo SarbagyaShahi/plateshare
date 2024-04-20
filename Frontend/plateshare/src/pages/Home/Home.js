@@ -8,7 +8,7 @@ import menu from "./Menu";
 
 import Layout from "../../components/Layout";
 import Homepage from "./Homepage";
-import About from "./About";
+
 
 
 const Home = () => {
@@ -19,9 +19,10 @@ const Home = () => {
 
 
                 <Homepage />
+                
 
 
-                <About />
+               
 
 
 

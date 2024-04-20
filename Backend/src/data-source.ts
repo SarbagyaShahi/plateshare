@@ -4,7 +4,7 @@ export const dataStoreOptions:DataSourceOptions={
     host:"localhost",
     database:"plateshare",
     username:"root",
-    synchronize: true,
+    synchronize: false,
     debug: false,
     logging: false,
     trace: false,

@@ -2,7 +2,7 @@
 header .navbar {
     position: absolute;
     width: 100%;
-    background-color: #84b841;
+    background-color: black;
     z-index: 1000;
 }
 
@@ -10,7 +10,7 @@ header .navbar.sticky {
     position: fixed;
     left: 0;
     top: 0;
-    background-color:  #84b841;
+    background-color:  Black;
     -webkit-transition: all 15ms ease-in-out;
     -moz-transition: all 15ms ease-in-out;
     -o-transition: all 15ms ease-in-out;
@@ -49,7 +49,7 @@ header .logo img {
 header .nav-link {
     display: inline-flex;
     justify-content: center;
-    color: #84b841;
+    color: black;
     padding: 0 1rem !important;
     font-size: 1.125rem;
     font-weight: 500;
@@ -67,7 +67,7 @@ header .sticky .nav-link {
 }
 
 header .nav-link:hover {
-    color: var(--yellow);
+    color: yellow;
 }
 
 header .cart {
@@ -78,7 +78,7 @@ header .cart {
 header .roundpoint {
     width: 16px;
     height: 16px;
-    background:#84b841 ;
+    background:black ;
     border-radius: 50%;
     color: black;
     font-size: 11.2px;
@@ -94,7 +94,7 @@ header .roundpoint {
 
 @media (max-width: 992px) {
     header .navbar {
-        background-color: #84b841;
+        background-color: black;
     }
 
     header .navbar-toggler {

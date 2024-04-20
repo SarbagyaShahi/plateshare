@@ -11,9 +11,9 @@ const Homepage = () => {
 
                     <Col lg={5}>
                         <div className="hero_text text-center">
-                            <h1 className="text-white">Plateshare</h1>
-                            <h2 className="text-white">Order,Donate</h2>
-                            <p className="text-white pt-2 pb-4">
+                            <h1 className="text-black">Plateshare</h1>
+                            <h2 className="text-black">Order,Donate</h2>
+                            <p className="text-black pt-2 pb-5">
                                 Plateshare is the platform where you can order,donate.
                             </p>
 

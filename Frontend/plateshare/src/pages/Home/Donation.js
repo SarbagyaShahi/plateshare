@@ -1,71 +1,210 @@
-import React from 'react';
-import Image2 from "../../Assets/Donation/Donation1.jpg";
-import Image3 from "../../Assets/Donation/Donation2.jpg";
-import Image4 from "../../Assets/Donation/Donation3.jpg";
 
-const mockData = [
-   
-    {
-        id: "0002",
-        image: Image2,
-        title: "",
-        paragraph: "A typical nepali khaja which every one loves",
-       
-    },
-    {
-        id: "0003",
-        image: Image3,
-        title: "Crunchy Burger",
-        paragraph: "A delicious crunchy burger like nothing",
-        rating: 4,
-        price: 250,
-    },
-    {
-        id: "0004",
-        image: Image4,
-        title: "Jhol Momo",
-        paragraph: "Famous delicious Khaja",
-        rating: 3.5,
-        price: 250,
-    },
-    {
-        id: "0005",
-        image: Image5,
-        title: "Keema Noodles",
-        paragraph: "Tibetan dish",
-        rating: 3.0,
-        price: 150,
-    },
-    {
-        id: "0006",
-        image: Image6,
-        title: "Panipuri",
-        paragraph: "A magical combination of the  puri,pani and aalo",
-        rating: 3,
-        price: 80,
-    },
-    {
-        id: "0007",
-        image: Image7,
-        title: "Maghiritta pizza",
-        paragraph: "Pizza for everyone",
-        rating: 5,
-        price: 500,
-    },
-    // {
-    //     id: "0008",
-    //     image: Image8,
-    //     title: "Classic Burger",
-    //     paragraph: "cheddar cheese, ketchup, mustard, pickles, onion",
-    //     rating: 2.0,
-    //     price: 89.12,
-    // },
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Header from "../../components/Header";
+import Card from 'react-bootstrap/Card';
 
-];
-export default function () {
-  return (
-   <>
+import React, { useState, useEffect, useRef } from "react";
+import {
+    MapContainer,
+    TileLayer,
+    Marker,
+    Popup
+} from "react-leaflet";
+import classes from '../../styles/Cartpage.css';
 
-   </>
-  )
+import Footer from '../../components/Footer';
+import Table from 'react-bootstrap/Table';
+
+import {
+    MDBBtn,
+    MDBContainer,
+    MDBRow,
+    MDBCol,
+    MDBCard,
+    MDBCardBody,
+    MDBInput,
+    MDBTextArea,
+    MDBFile
 }
+
+    from 'mdb-react-ui-kit';
+
+function Donation() {
+    const [cart, setCart] = useState([])
+    console.log(cart)
+    function addToCart(data) {
+        setCart([...cart, data])
+    }
+
+
+    const [menuList, setmenuList] = useState([])
+    const fetchmenuList = () => {
+        fetch('http://localhost:10000/menu/get_menu')
+            .then(response => response.json())
+            .then(data => {
+                setmenuList(data.data);
+                console.log(menuList)
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+    useEffect(() => {
+        fetchmenuList()
+    }, [])
+    const mapRef = useRef(null);
+    const [location, setLocation] = useState([27.70770481291534, 85.32522362345625]);
+    //Send location variable in place of location in database
+    const [address, setAddress] = useState("")
+
+    const onLocationChange = (location) => {
+        setLocation(location)
+    }
+
+    useEffect(() => {
+        const fetchAddress = async () => {
+            const response = await fetch(
+                `https://api.opencagedata.com/geocode/v1/json?q=${location[0]}+${location[1]}&key=12fb8a882afb473aafcc3be8ea7267cb`
+
+                // New API KEY
+                // `https://api.opencagedata.com/geocode/v1/json?q=${location[0]}+${location[1]}&key=0f11663459b6469293821368875f9787`
+            );
+            const data = await response.json();
+            const locationName = data.results[0].formatted;
+            setAddress(locationName);
+
+        };
+
+        fetchAddress();
+    }, [location]);
+
+    useEffect(() => {
+        const mapInstance = mapRef.current;
+        if (mapInstance) {
+            mapInstance.on('moveend', () => {
+                const center = mapInstance.getCenter();
+                setLocation([center.lat, center.lng]);
+                onLocationChange([center.lat, center.lng]);
+            });
+            console.log(location);
+        }
+    }, [onLocationChange]);
+
+
+    return (
+        <div>
+            <Header />
+            <div class="container-fluid">
+                <h1>Enjoy Our Menu</h1>
+
+                <div class="row justify-content-around ">
+                    {menuList.map((item) => (
+                        <Card style={{ width: '18rem', 'marginBottom': '2rem' }}>
+
+                            <Card.Body>
+                                <Card.Title>
+                                    {item.menu_name}</Card.Title>
+                                <Card.Text>
+                                    {item.menu_type}
+                                </Card.Text>
+                                <Card.Text>
+                                    {item.menu_price}
+                                </Card.Text>
+
+                                <Card.Text>
+                                    {item.menu_rating}
+                                </Card.Text>
+                                <Card.Text>
+                                    {item.menu_}
+                                </Card.Text>
+
+
+                                <Button variant="primary" onClick={() => { addToCart(item) }}>Add to Cart</Button>
+                            </Card.Body>
+                        </Card>
+                    )
+                    )
+                    }
+
+                </div>
+
+
+
+                <h1>Cart</h1>
+                <Table responsive style={{ 'marginTop': '5rem' }}>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+
+                            <th>Name of Products</th>
+                            <th>Price</th>
+                            <th>Image</th>
+                           
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                       
+{
+    cart.map((cartItem)=>{
+        return(
+            <tr>
+                <td>{cartItem.id}</td>
+                <td>{cartItem.menu_name}</td>
+                <td>{cartItem.menu_price}</td>
+                <td>{cartItem.menu_image}</td>
+            </tr>
+        )
+    })
+}
+                        
+                            
+                     
+                    </tbody>
+                    <p>
+        
+                       
+                    </p>
+                </Table>
+
+                <div className='container'>
+                    <div className="row">
+                        <div className="col-8">
+                            <MapContainer center={location} zoom={12} style={{ height: "50vh" }} ref={mapRef}>
+                                <TileLayer
+                                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                />
+                                {location && (
+                                    <Marker position={location}>
+                                        <Popup>
+                                            {address}
+                                        </Popup>
+                                    </Marker>
+                                )}
+                            </MapContainer>
+                        </div>
+
+                        <div className="col">
+                            <label htmlFor="" className='form-text' >Delivery Location</label>
+                            <br />
+                            <input className='form-control' value={address} type="text" disabled />
+
+                            <br />
+
+                            <button className='btn btn-primary'>Checkout</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
+}
+
+
+
+export default Donation;
