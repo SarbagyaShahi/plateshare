@@ -14,7 +14,12 @@ import NgoArticle from "./Ngo/NgoArticle";
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import NgoDashboard from "./Ngo/NgoDashboard";
-
+import Articles from "./pages/Home/Articles";
+import Donation from "./pages/Home/Donation";
+import Ngoevent from "./Ngo/Ngoevent";
+import Event from "./pages/Home/Event";
+import AdminDonation from "./admin/AdminDonation";
+import NgoDonation from "./Ngo/NgoDonation";
 
 
 function App() {
@@ -34,6 +39,13 @@ function App() {
           <Route path="/Recipe" element={<Recipe />} />
           <Route path="/NgoDashboard" element={<NgoDashboard />} />
           <Route path="/NgoArticle" element={<NgoArticle />} />
+          <Route path="/Articles" element={<Articles />} />
+          <Route path="/Ngoevent" element={<Ngoevent />} />
+          <Route path="/Donation" element={<Donation/>} />
+          <Route path="/Event" element={<Event/>}/>
+          <Route path="/AdminDonation" element={<AdminDonation/>}/>
+          <Route path="/NgoDonation" element={<NgoDonation/>}/>
+         
          
         </Routes>
       </Router>

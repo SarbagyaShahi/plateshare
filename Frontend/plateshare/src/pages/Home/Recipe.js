@@ -6,6 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Header from "../../components/Header";
 import Card from 'react-bootstrap/Card';
 import { useEffect } from "react";
+import Footer from "../../components/Footer";
 
 import {
   MDBBtn,
@@ -214,13 +215,15 @@ function Recipe() {
           )
           )
           }
+          
         </div>
 
 
 
       </div>
-
+<Footer/>
     </div>
+   
   )
 }
 

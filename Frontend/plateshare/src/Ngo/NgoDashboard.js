@@ -13,6 +13,7 @@ function NgoDashboard() {
                     <li><a href="/order">Article</a></li>
 
                     <li><a href="#">Donations</a></li>
+                    <li><a href="#">Donations</a></li>
 
                 </ul>
             </div>

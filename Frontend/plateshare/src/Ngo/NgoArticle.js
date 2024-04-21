@@ -20,6 +20,7 @@ import {
 }
 
     from 'mdb-react-ui-kit';
+import Footer from "../components/Footer";
 
 function NgoArticle() {
     const [article_topic, setarticletopic] = useState("");
@@ -106,7 +107,7 @@ function NgoArticle() {
         <div>
 
 
-            <Header />
+            
 
 
 
@@ -204,7 +205,7 @@ function NgoArticle() {
                 </div>
 
 
-
+<Footer/>
             </div>
 
         </div>

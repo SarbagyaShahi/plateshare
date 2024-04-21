@@ -31,8 +31,15 @@ function Login() {
             data.json().then(body => {
                 if (data.status === 200) {
                     alert('Login Successful');
-                    navigate("/Menu");
+                    if(data.role ==="admin"){
+                        alert ("Admin Logged in sucessfully")
+                    }
+                    else{
+                        alert ("User Logged in sucessfully")
+                    }
+
                 }
+                
                 else {
                     if (body?.data?.email) {
                         alert(body?.data?.email);
@@ -48,7 +55,30 @@ function Login() {
         }).catch(e => {
             console.log(e)
         })
-
+        // if (data.status === 200) {
+        //     if (parsedData.role === "admin") {
+        //       navigate("/admin-dashboard");
+        //     } else if (parsedData.role === "guide") {
+        //       navigate("/guide/complete");
+        //     } else if (parsedData.role === "seller") {
+        //       navigate("/seller/complete");
+        //     } else {
+        //       navigate("/AdminDashboard");
+        //     }
+            
+        //   }
+        
+        //   if (data.status === 200) {
+        //     if (parsedData.role === "admin") {
+        //       navigate("/admin-dashboard");
+        //     } else if (parsedData.role === "guide") {
+        //       navigate("/guide/complete");
+        //     } else if (parsedData.role === "seller") {
+        //       navigate("/seller/complete");
+        //     } else {
+        //       navigate("/NgoDashboard");
+        //     }
+        //   }
 
     }
     return (

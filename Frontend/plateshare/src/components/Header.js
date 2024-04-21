@@ -3,17 +3,33 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../Assets/logo/logo.png";
 import "../styles/HeaderStyle.css";
+import swal from "sweetalert";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
-
-  // Scroll Navbar
-  const changeValueOnScroll = () => {
-    const scrollValue = document?.documentElement?.scrollTop;
-    scrollValue > 100 ? setNav(true) : setNav(false);
+  const [loggedIn, setLoggedIn] = useState(true);
+  // const Location =userLocation();
+  // const shouldDisplayNavbar = ![
+  //   "./pages/home/Homepage"
+  // ]
+  const handleLogout = () => {
+    swal({
+      title: "Log out?",
+      text: "Are you sure want to log out?",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        fetch("http://localhost:10000/auth/logout", {
+          method: "GET",
+          credentials: "include",
+        });
+        swal("See you soon!", "", "success");
+      }
+    });
   };
 
-  window.addEventListener("scroll", changeValueOnScroll);
+  // Scroll Navbar
 
   return (
     <header>
@@ -23,38 +39,44 @@ const Header = () => {
         className={`${nav === true ? "sticky" : ""}`}
       >
         <Container>
-          <Navbar.Brand href="#home">
-
-          </Navbar.Brand>
+          <Navbar.Brand href="#home"></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/">
-                Home
-              </Nav.Link>
-              <Nav.Link as={Link} to="/about">
-                About
-              </Nav.Link>
-              <Nav.Link as={Link} to="/Menu">
-                Our Menu
-              </Nav.Link>
-
-              <Nav.Link as={Link} to="/Article">
-                Article
-              </Nav.Link>
-              <Nav.Link as={Link} to="/Recipe">
-                Recipes
-              </Nav.Link>
-
-              <Nav.Link as={Link} to="/Cartpage">
-                <i className="fa fa-shopping-cart"></i> 
-              </Nav.Link>
-
-
-
-              <Nav.Link as={Link} to="/Login">
-                Login
-              </Nav.Link>
+              {loggedIn === false ? (
+                <>
+                  <Nav.Link as={Link} to="/">
+                    Home
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/about">
+                    About
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/Login">
+                    Login
+                  </Nav.Link>
+                </>
+              ) : (
+                <>
+                  <Nav.Link as={Link} to="/">
+                    Home
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/about">
+                    About
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/Menu">
+                    Our Menu
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/Articles">
+                    Article
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/Recipe">
+                    Recipes
+                  </Nav.Link>
+                  <Nav.Link onClick={handleLogout}>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                  </Nav.Link>
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

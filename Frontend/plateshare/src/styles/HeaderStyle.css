@@ -2,7 +2,7 @@
 header .navbar {
     position: absolute;
     width: 100%;
-    background-color: black;
+    background-color: white;
     z-index: 1000;
 }
 
@@ -10,7 +10,7 @@ header .navbar.sticky {
     position: fixed;
     left: 0;
     top: 0;
-    background-color:  Black;
+    background-color:  white;
     -webkit-transition: all 15ms ease-in-out;
     -moz-transition: all 15ms ease-in-out;
     -o-transition: all 15ms ease-in-out;
@@ -94,7 +94,7 @@ header .roundpoint {
 
 @media (max-width: 992px) {
     header .navbar {
-        background-color: black;
+        background-color: white;
     }
 
     header .navbar-toggler {

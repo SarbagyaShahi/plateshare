@@ -7,12 +7,14 @@ import  Modal  from 'react-bootstrap/Modal';
 
 
 function MenuDash() {
+    const [menu_Id, setmenuId] = useState("");
     const [menu_name, setmenuname] = useState("");
     const [menu_type, setmenutype] = useState("");
     const [menu_price, setmenuprice] = useState("");
     const [menu_rating, setmenurating] = useState("");
     const [menu_Image, setmenuImage] = useState("");
-    const[modelIsOpen,setModelIsOpen]=useState(true);
+    const[modelIsOpen,setModelIsOpen]=useState(false);
+    console.log('menu_name', menu_type);
 const closeModal =()=>{
     setModelIsOpen(false);
 
@@ -31,11 +33,12 @@ const openModal =(menuList) => {
         if (menu_Image && menu_Image.length > 0) {
             formData.append('menuimage', menu_Image[0]);
         }
-        formData.append('menu_price', menu_price);
-        formData.append('menu_type', menu_type);
-        formData.append('menu_name', menu_name);
-        formData.append('menu_rating', menu_rating);
-        formData.append('menu_Image', menu_Image);
+        formData.append('menu_Id',menu_Id);
+        formData.append('menu_price',menu_price);
+        formData.append('menu_type',menu_type);
+        formData.append('menu_name',menu_name);
+        formData.append('menu_rating',menu_rating);
+        formData.append('menu_Image',menu_Image);
 
         let addMenu = 'http://localhost:10000/menu/create_menu'
 
@@ -96,14 +99,23 @@ const openModal =(menuList) => {
         fetchMenuList()
     }, [])
     const handleEdit = (Id) => {
-        fetch(`http://localhost:10000/menu/put_menu${Id}/`)
+        let formData = new FormData();
+   
+        formData.append('menu_price',menu_price);
+        formData.append('menu_type',menu_type);
+        formData.append('menu_name',menu_name);
+        formData.append('menu_rating',menu_rating);
+     
+
+        fetch(`http://localhost:10000/menu/put_menu`,{method:"PUT",body:formData})
             .then(response => response.json())
             .then(data => {
+               
                 setmenuname(data.menu_name);
                 setmenuprice(data.menu_price);
                 setmenutype(data.menu_type);
                 setmenurating(data.menu_rating);
-                setmenuImage(data.menu_Image);
+              
 
             });
     }
@@ -134,7 +146,6 @@ const openModal =(menuList) => {
                     <li><a href="/dashboard">Dashboard</a></li>
 
                     <li><a href="#">Order</a></li>
-                    <li><a href="#">User List</a></li>
                     <li><a href="#">Menu</a></li>
                     <li><a href="#">Donations</a></li>
                 </ul>
@@ -229,7 +240,7 @@ const openModal =(menuList) => {
                 <div className="modal">
                     <Modal show={modelIsOpen} onHide={closeModal}>
                         <Modal.Header closeButton>
-                            <Modal.Title>Edit Room</Modal.Title>
+                            <Modal.Title>Edit Menu</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             <Form>
@@ -237,22 +248,22 @@ const openModal =(menuList) => {
                                     className="mb-3 text-start"
                                     controlId="formBasicEmail"
                                 >
-                                    <Form.Label>Room Name</Form.Label>
+                                    <Form.Label>Menu Name </Form.Label>
                                     <Form.Control
                                         type="text"
-                                        placeholder="Enter room name"
-                                        value={menu_rating}
-                                        onChange={(e) => setmenurating(e.target.value)}
+                                        placeholder="Enter menu name"
+                                        value={menu_name}
+                                        onChange={(e) => setmenuname(e.target.value)}
                                     />
                                 </Form.Group>
                                 <Form.Group
                                     className="mb-3 text-start"
                                     controlId="formBasicEmail"
                                 >
-                                    <Form.Label>Room Price</Form.Label>
+                                    <Form.Label>Menu type</Form.Label>
                                     <Form.Control
                                         type="text"
-                                        placeholder="Enter room price"
+                                        placeholder="Enter menu type"
                                         value={menu_type}
                                         onChange={(e) => setmenutype(e.target.value)}
                                     />
@@ -261,10 +272,10 @@ const openModal =(menuList) => {
                                     className="mb-3 text-start"
                                     controlId="formBasicEmail"
                                 >
-                                    <Form.Label>Room Capacity</Form.Label>
+                                    <Form.Label>Menu Rating</Form.Label>
                                     <Form.Control
                                         type="text"
-                                        placeholder="Enter room capacity"
+                                        placeholder="Enter Menu Rating"
                                         value={menu_rating}
                                         onChange={(e) => setmenurating(e.target.value)}
                                     />
@@ -273,28 +284,15 @@ const openModal =(menuList) => {
                                     className="mb-3 text-start"
                                     controlId="formBasicEmail"
                                 >
-                                    <Form.Label>Room No.</Form.Label>
+                                    <Form.Label>menu_price</Form.Label>
                                     <Form.Control
                                         type="number"
-                                        placeholder="Enter room number"
+                                        placeholder="Enter menu price "
                                         value={menu_price}
                                         onChange={(e) => setmenuprice(e.target.value)}
                                     />
                                 </Form.Group>
-                                <Form.Group
-                                    className="mb-3 text-start"
-                                    controlId="formBasicEmail"
-                                >
-                                    <Form.Label>Menu</Form.Label>
-                                    <Form.Control
-                                        as="textarea"
-                                        rows={3}
-                                        placeholder="Enter room description"
-                                        value={menu_name}
-                                        onChange={(e) => setmenuname(e.target.value)}
-                                    />
-                                </Form.Group>
-                                <Button variant="primary" onClick={handleEdit}>
+                                <Button variant="primary" onClick={()=>handleEdit(menu_Id)}>
                                     Update Menu
                                 </Button>
                             </Form>

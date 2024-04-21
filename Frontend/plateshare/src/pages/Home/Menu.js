@@ -6,7 +6,6 @@ import Card from "react-bootstrap/Card";
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-
 import Footer from "../../components/Footer";
 import Table from "react-bootstrap/Table";
 
@@ -95,6 +94,29 @@ function Menu() {
       console.log(location);
     }
   }, [onLocationChange]);
+
+  const [order, setOrder] = useState([]);
+
+  const createOrder = async (e) => {
+    e.preventDefault();
+
+    let formData = new FormData();
+    formData.append("order_name", cart.menu_name);
+    formData.append("order_type", cart.menu_type);
+    formData.append("order_price", cart.menu_price);
+    formData.append("order_location", address);
+
+    let addOrder = 'http://localhost:10000/Order/create_order'
+
+    let addOrderResponse = await fetch(addOrder, {
+      method: "POST",
+      body: formData,
+    });
+
+    let addOrderJson = await addOrderResponse.json();
+
+  console.log(addOrderJson);
+  };
 
   return (
     <div>
@@ -204,7 +226,7 @@ function Menu() {
 
               <br />
 
-              <button className="btn btn-primary">Checkout</button>
+              <button className="btn btn-primary" onClick={createOrder}>Checkout</button>
             </div>
           </div>
         </div>
