@@ -16,8 +16,7 @@ export class order extends GlobalEntity{
     @Column()
     order_location:string 
      
-    @Column()
-    order_quantity:string
+   
      
    
  

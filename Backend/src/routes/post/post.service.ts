@@ -1,9 +1,8 @@
 import { post } from '../../entity/post.entity';
 import { postModel } from '../../model/post.model';
 import { postDto } from './post.dto';
-import { Request } from 'express';
-import { Delete } from '../../lib/methods';
-import { create } from 'axios';
+import { InvalidInputError } from '../../middleware/error.middleware';
+
 
 
 export class postService {
@@ -24,14 +23,11 @@ export class postService {
         let posts = await this.post_model.find({});
         return { data: posts }
     }
-    async Deleteposts(Delete: postDto) {
-        let posts = new post()//檢
-        posts.post_name = Delete.post_name;
-        posts.post_description = Delete.post_description;
-        posts.posted_ingredients=Delete.posted_ingredients
-        posts.posted_by = Delete.posted_by;
-
+    async Deleteposts(Delete: string) {
+        let posts = await this.post_model.findOne({where:{Id:Delete}})
+        if(!posts)
+            throw new InvalidInputError("No id found")
         await this.post_model.delete(posts)
-        return ('post is deleted')
+        return ('menu is deleted')
     }
-}
+    }

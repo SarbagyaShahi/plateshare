@@ -27,6 +27,7 @@ export class AuthService {
         user.User_address = data.address
         user.User_email = data.email
         user.User_name = data.first_name + " " + data.last_name
+  
         let hashPass = hashPassword(data.password)
         user.User_password = hashPass
         await this.user_model.create(user)

@@ -15,6 +15,7 @@ export class OrderService {
         orders.order_location = create.order_location;
         orders.order_name = create.order_name;
         orders.order_price = create.order_price;
+        orders.order_type = create.order_type;
         await this.order_model.create(orders)
         return ('order is created')
     }

@@ -4,7 +4,6 @@ export interface orderDto{
     order_Id?:string,
     order_price?:number,
     order_location?:string,
-    order_quantity?:string,
     order_type?:string
   
     

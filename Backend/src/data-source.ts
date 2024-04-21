@@ -4,11 +4,10 @@ export const dataStoreOptions:DataSourceOptions={
     host:"localhost",
     database:"plateshare",
     username:"root",
-    synchronize: false,
+    synchronize: true,
     debug: false,
     logging: false,
     trace: false,
-    password:"",
     entities:[__dirname + '/entity/**/*.entity.{js,ts}'],
     migrations:[__dirname + '/migrations/**/*.entity.{js,ts}']
 }

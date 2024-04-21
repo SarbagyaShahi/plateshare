@@ -13,7 +13,8 @@ export class donate extends GlobalEntity {
     donated_time:number
     @Column()
     donated_price: number
-
+    @Column()
+    donation_location: string
 
 
 }

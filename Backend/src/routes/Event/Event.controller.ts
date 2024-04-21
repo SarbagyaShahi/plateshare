@@ -1,12 +1,11 @@
 import { Controller } from "../../lib/bind"
 import { ImageSingle } from "../../lib/imageHandler";
 import { Delete, Get, Post, Put } from '../../lib/methods';
+import { InvalidInputError } from "../../middleware/error.middleware";
 import { AuthorizedRequest } from "../../typings/base.type"
 import { eventService } from "./Event.service"
-import { event } from '../../entity/event.entity';
 
-
-@Controller("/event")
+@Controller("/Event")
 export class  EventController {  
     constructor(
         private service=new eventService()
@@ -14,7 +13,7 @@ export class  EventController {
     }
 
     @Post("/create_event")
-    @ImageSingle("we")
+    @ImageSingle("event_Image")
     async create (req:AuthorizedRequest){
         let body =req.body
         let message=this.service.createevent(body)
@@ -26,11 +25,19 @@ export class  EventController {
         let message=this.service.getevents(body)
         return message
     }
-
+    @Put("/put_event")
+    @ImageSingle("food_image")
+    async edit (req:AuthorizedRequest){
+        let body =req.body
+        let message=this.service.getevents(body)
+        return message
+    }
     @Delete("/delete_event")
     async Delete (req:AuthorizedRequest){
-        let body =req.body
-        let message=this.service.Deleteevents(body)
+        let param:{id?:string} =req.query
+        if(!param.id)
+                throw new InvalidInputError("No id found")
+        let message=this.service.Deleteevents(param.id)
         return message
     }
 }

@@ -5,7 +5,7 @@ import { InvalidInputError } from "../../middleware/error.middleware";
 import { AuthorizedRequest } from "../../typings/base.type"
 import { menuService } from "./Menu.service"
 
-@Controller("/Menu")
+@Controller("/menu")
 export class  MenuController {  
     constructor(
         private service=new menuService()

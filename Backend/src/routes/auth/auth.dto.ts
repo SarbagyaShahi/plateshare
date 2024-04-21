@@ -8,6 +8,7 @@ export interface RegisterDto{
     address?:string,
     password?:string,
     confirmPassword?:string,
+    role?:string
 }
 export interface LoginDto{
     email?: string;
@@ -27,4 +28,5 @@ export const register_schema=yup.object().shape({
     address:yup.string().required(),
     first_name:yup.string().required(),
     last_name:yup.string().required()
+
 })

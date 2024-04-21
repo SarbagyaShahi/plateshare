@@ -29,11 +29,9 @@ export class menuService {
 
     async Putmenus(Put: menuDto,) {
         let menus = await this.menu_model.findOne({ where: { Id: Put.menu_Id } });
-
         menus.menu_type = Put.menu_type;
         menus.menu_price = Put.menu_price;
         menus.menu_rating = Put.menu_rating;
-        menus.menu_Image = Put.menu_Image ? Put.menu_Image : menus.menu_Image
         await this.menu_model.save(menus)
         return ('menu is edited')
     }

@@ -26,7 +26,6 @@ export const otp_handler=new OtpMessage({
         routeId: 116,
         type: "text",
         password: "",
-        senderId: "NEST_Alert",
         campaign: 6544,
         username: ""
     },{
