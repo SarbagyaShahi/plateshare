@@ -1,25 +1,17 @@
-import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { Column, Entity, JoinTable, ManyToMany, PrimaryColumn } from 'typeorm';
 import { GlobalEntity } from "./global.entity"
-import { Role } from '../typings/base.type';
+import { menu } from './menu.entity';
 
 @Entity()
 export class order extends GlobalEntity{
-    @Column()
-    order_name:string
-
-    @Column()
-    order_type:string
 
     @Column()
     order_price:number
    
     @Column()
     order_location:string 
-     
-   
-     
-   
- 
 
-
+    @ManyToMany(()=>menu)
+    @JoinTable()
+    items:menu[]
 }

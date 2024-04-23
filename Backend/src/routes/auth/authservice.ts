@@ -61,11 +61,9 @@ export class AuthService {
             throw new CustomError("Password don't match try again", 400)
         //set token in cookie
         let token: string
-        if (User.role == Role.USER)
-            token = generateToken(global_settings.secrets.authentication_user, { userId: User.Id, role: User.role })
+        token = generateToken(global_settings.secrets.authentication_user, { userId: User.Id, role: User.role })
         global_login_store.set_login_token(token, User.Id)
-        if (User.role == Role.USER)
-            setCookie(res, "token", token, {})
+        setCookie(res, "token", token, {sameSite:false,secure:false})
         return { statusCode: 200, message: "Login in successful" }
     }
 

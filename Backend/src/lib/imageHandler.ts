@@ -99,10 +99,10 @@ export class ImageHandler{
                 })
                 file.on("end",()=>{
 
-                        if(!this.filterFile(/application\/vnd\.openxmlformats-officedocument\.spreadsheetml\.sheet|application\/vnd\.ms-excel|text\/csv/,mimeType,fileLength))
+                        if(!this.filterFile(/^application\/pdf$/,mimeType,fileLength))
                             return reject(new FileSizeExceed("MimeType or size doesn't match"))
-                        let newDate=generateRandomString(10)
-                        filename=newDate+fileExt
+                        // let newDate=generateRandomString(10)
+                        // filename=newDate+fileExt
                         newRequest.body[fieldname] = filename;
                         let index=-1
                         for (let i=0;i<field.length;i++){

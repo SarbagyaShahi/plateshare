@@ -1,9 +1,11 @@
 
 import { article } from '../../entity/article.entity';
 export interface articleDto {
-    article_topic?: string,
-    article_description?: string,
-    article_publisheddate?: Number
+    article_name:string,
+    article_file:string,
+    article_type:string,
+    article_description:string
+    
 
 
 }

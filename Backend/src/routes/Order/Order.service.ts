@@ -1,28 +1,38 @@
 import { order } from '../../entity/order.entity';
 import { orderModel } from '../../model/order.model';
 import { orderDto } from './Order.dto';
-import { Request } from 'express';
-import { Delete } from '../../lib/methods';
 import { InvalidInputError } from '../../middleware/error.middleware';
+import { menuModel } from '../../model/menu.model';
+import { In } from 'typeorm';
 
 export class OrderService {
     constructor(
-        private order_model = new orderModel()
-    ) { }
+        private order_model = new orderModel(),
+        private menu_model=new menuModel()
+    ) {}
+
     async createorder(create: orderDto) {
-         
         let orders = new order()
-        orders.order_location = create.order_location;
-        orders.order_name = create.order_name;
-        orders.order_price = create.order_price;
-        orders.order_type = create.order_type;
-        await this.order_model.create(orders)
+        let foodItem=await this.menu_model.find({where:{Id:In(create.order_items)}})
+        let order_price=0        
+        for(let i of foodItem){
+            order_price+=i.menu_price
+        }
+        if(foodItem.length <=0)
+            throw new InvalidInputError("No food found")
+        orders.order_location = create.order_locations;
+        orders.items=foodItem
+        orders.order_price =order_price;
+        console.log(orders)
+        await this.order_model.save(orders)
         return ('order is created')
     }
+
     async getorders(read:orderDto){
-        let orders = await this.order_model.find({});
+        let orders = await this.order_model.find({relations:{items:true}});
         return {data:orders}
     }
+
     async Deleteorders(Delete: string) {
         let orders = await this.order_model.findOne({where:{Id:Delete}})
         if(!orders)

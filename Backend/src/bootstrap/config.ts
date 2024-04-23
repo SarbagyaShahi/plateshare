@@ -29,7 +29,8 @@ export const global_settings={
     },
     static:{
         image:"./public/images",
-        compressedImage:"./public/compress"
+        compressedImage:"./public/compress",
+        article:"./Assests"
     },
     general:{
         pagination:isNaN(Number(process.env.PAGINATION))?20:Number(process.env.PAGINATION)

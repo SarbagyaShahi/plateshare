@@ -1,32 +1,30 @@
-
 import { Controller } from "../../lib/bind"
-import { Delete, Get, Post } from '../../lib/methods';
-import { orderDto } from "./Order.dto"
+import { Get, Post } from '../../lib/methods';
+import { order_schema } from "./Order.dto"
 import { OrderService } from "./Order.service"
-import { order } from '../../entity/order.entity';
-import { create } from 'axios';
 import { AuthorizedRequest } from "../../typings/base.type";
-import { InvalidInputError } from '../../middleware/error.middleware';
 
-@Controller("/Order")
+@Controller("/order")
 export class  OrderController {  
     constructor(
         private service=new OrderService()
-    ) {
-    }
+    ){}
 
     @Post("/create_order")
     async create (req:AuthorizedRequest){
-        let body =req.body
-        let message=this.service.createorder(body)
+        let body=order_schema.validateSync(req.body)
+        console.log(req.body)
+        let message=await this.service.createorder(body)
         return message
     }
+
     @Get("/get_order")
     async read (req:AuthorizedRequest){
         let body =req.body
-        let message=this.service.getorders(body)
+        let message=await this.service.getorders(body)
         return message
     }
+
     // @Delete("/delete_order")
     // async Delete (req:AuthorizedRequest){
     //     let param:{order_id?:string} =req.query
@@ -35,7 +33,4 @@ export class  OrderController {
     //     let message=this.service.Deleteorders(param.order_id)
     //     return message
     // }
-
-
-
 }
