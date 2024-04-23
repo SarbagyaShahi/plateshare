@@ -1,24 +1,24 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
-import Footer from "../components/Footer";
+
 import { Table } from "react-bootstrap";
 
-function NgoDonation() {
-  const [donateList, setdonateList] = useState([]);
-  const fetchDonateList = () => {
-    fetch("http://localhost:10000/donate/get_donate")
+function AdminOrder() {
+  const [orderList, setorderList] = useState([]);
+  const fetchOrderList = () => {
+    fetch("http://localhost:10000/order/get_order")
       .then((response) => response.json())
       .then((data) => {
-        setdonateList(data.data);
-        console.log(donateList);
+        setorderList(data.data);
+        console.log(orderList);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
   };
   useEffect(() => {
-    fetchDonateList();
+    fetchOrderList();
   }, []);
   const handleDelete = (Id) => {
     console.log(Id);
@@ -30,7 +30,7 @@ function NgoDonation() {
           throw new Error("Network response was not ok");
         }
         //       // Optionally, refresh the room list after a successful delete
-        fetchDonateList();
+        fetchOrderList();
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -87,39 +87,34 @@ function NgoDonation() {
             </Card>
           ))} */}
           
-          <h2 className="mt-5 mb-3 text-start">Donation Details</h2>
+          <h2 className="mt-5 mb-3 text-start">Order Details</h2>
 
           <Table responsive>
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Donation Name:</th>
-                <th>Location</th>
-                <th>Donated by</th>
-                <th>Price</th>
-                <th>Manage Donation</th>
+                <th>Order_items:</th>
+                <th>Order Price</th>
+                
+                <th>Order Location</th>
+                
 
         
               </tr>
             </thead>
 
             <tbody>
-              {donateList.map((donateList) => (
-                <tr key={donateList.Id}>
-                  <td>{donateList.Id}</td>
-                  <td>{donateList.donate_name}</td>
+              {orderList.map((orderList) => (
+                <tr key={orderList.Id}>
+                  <td>{orderList.Id}</td>
+                  <td>{orderList.items.map(item=>item.menu_name)}</td>
+                  <td>{orderList.items.map(item=>item.menu_price)}</td>
 
-                  <td>{donateList.donation_location}</td>
-                  <td>{donateList.donated_by}</td>
-                  <td>{donateList.donated_price}</td>
+                  <td>{orderList.order_location}</td>
+                  
 
                   <td>
-                    <Button
-                      variant="danger"
-                      onClick={() => handleDelete(donateList.Id)}
-                    >
-                      Delete
-                    </Button>
+                    
                   </td>
                 </tr>
               ))}
@@ -127,8 +122,8 @@ function NgoDonation() {
           </Table>
         </div>
       </div>
-      
+    
     </div>
   );
 }
-export default NgoDonation;
+export default AdminOrder;

@@ -35,7 +35,7 @@ function Login() {
                         alert ("Admin Logged in sucessfully")
                     }
                     else{
-                        alert ("User Logged in sucessfully")
+                        window.location="http://localhost:3000/Menu"
                     }
 
                 }
@@ -109,9 +109,7 @@ function Login() {
 
                 <div class="row mb-4">
 
-                    <div class="col mt-1 d-flex justify-content-end">
-                        <a href="#!">Forgot password?</a>
-                    </div>
+                
 
                     <div className="haveaccount-login mt-3  ">
                         Does not have account?

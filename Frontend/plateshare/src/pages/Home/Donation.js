@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 
 import Header from "../../components/Header";
 import Card from "react-bootstrap/Card";
@@ -200,7 +199,7 @@ function Donation() {
             <Card style={{ width: "18rem", marginBottom: "2rem" }}>
               <Card.Body>
                 <Card.Title>
-                  Donation Name:
+                  Food Name:
                   {item.donate_name}
                 </Card.Title>
                 <Card.Text>

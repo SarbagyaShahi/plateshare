@@ -25,6 +25,7 @@ const Header = () => {
           credentials: "include",
         });
         swal("See you soon!", "", "success");
+        window.location="http://localhost:3000/Login"
       }
     });
   };

@@ -1,88 +1,75 @@
-import React from "react";
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import '../admin/AdminDashboard.css';
 import Button from 'react-bootstrap/Button';
-import Modal from "react-bootstrap/Modal";
+import Form from 'react-bootstrap/Form';
+import Table from 'react-bootstrap/Table';
+import  Modal  from 'react-bootstrap/Modal';
+import Footer from '../components/Footer';
 
-import Header from "../components/Header";
-import Card from 'react-bootstrap/Card';
-import { useEffect } from "react";
 
-import {
-    MDBBtn,
-    MDBContainer,
-    MDBRow,
-    MDBCol,
-    MDBCard,
-    MDBCardBody,
-    MDBInput,
-    MDBTextArea,
-    MDBFile
-}
-
-    from 'mdb-react-ui-kit';
-import Footer from "../components/Footer";
 
 function NgoArticle() {
-    const [article_topic, setarticletopic] = useState("");
-    const [article_description, setarticledescription] = useState("");
-    const [article_publisheddate, setarticlepublisheddate] = useState("");
+    const [article_Id, setarticleId] = useState("");
+    const [article_name, setarticlename] = useState("");
+    const [article_file, setarticlefile] = useState("");
+    const [article_type, setarticletype] = useState("");
+    const [article_description,setarticledescription] = useState("");
+  
+    console.log('article_name',article_name);
+   
 
+   
 
-    const handlePost = async (e) => {
+    const handleArticle = async (e) => {
         e.preventDefault();
 
-
         let formData = new FormData();
+        formData.append('articlefile',article_file);
+        if (article_file && article_file.length > 0) {
+            formData.append('article_file',article_file);
+        }
+        formData.append('article_Id',article_Id);
+        formData.append('article_name',article_name);
+        formData.append('article_type',article_type);
+        formData.append('article_description',article_description);
 
-        formData.append('article_topic', article_topic);
-        formData.append('article_description', article_description);
-        formData.append('article_publisheddate', article_publisheddate);
+        let addarticle = 'http://localhost:10000/article/create_article'
 
-
-
-        let addArticle = 'http://localhost:10000/article/create_article'
-
-        let addArticleResponse = await fetch(addArticle, {
+        let addarticleResponse = await fetch(addarticle, {
             method: 'POST',
             body: formData,
             credentials: 'include'
         });
-        console.log(formData)
-        let parsedData = await addArticleResponse.json();
+        let parsedData = await addarticleResponse.json();
         console.log(parsedData);
         console.log(formData)
 
-        if (addArticleResponse.status === 201) {
-            alert('Article Posted successfully');
-            setarticletopic('');
+        if (addarticleResponse.status === 201) {
+            alert('Article Added Successfully');
+            setarticlename('');
             setarticledescription('');
-            setarticlepublisheddate('');
-
-
-
-
+            setarticlefile('');
+            setarticletype('');
         }
 
         else {
-            if (parsedData.article_topic) {
-                alert(parsedData.article_topic);
+            if (parsedData.article_name) {
+                alert(parsedData.article_file);
             }
 
-            else if (parsedData.artice_description) {
-                alert(parsedData.artice_description);
+            else if (parsedData.article_description) {
+                alert(parsedData.article_description);
             }
-            else if (parsedData.article_publisheddate) {
-                alert(parsedData.article_publisheddate);
+            else if (parsedData.article_type) {
+                alert(parsedData.article_type);
             }
-
-
+            else if (parsedData.article_file) {
+                alert(parsedData.article_file);
+            }
+            
 
         }
     }
-
-    const [show, setShow] = useState(false)
-    const handleClose = () => setShow(false)
-    const handleShow = () => setShow(true)
 
     const [articleList, setarticleList] = useState([])
     const fetcharticleList = () => {
@@ -96,121 +83,126 @@ function NgoArticle() {
                 console.error('Error:', error);
             });
     }
+
     useEffect(() => {
         fetcharticleList()
     }, [])
+    
 
+    const handleDelete = (Id) => {
+        console.log(Id)
+        fetch(`http://localhost:10000/article/delete_article?id=${Id}/`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                //       // Optionally, refresh the room list after a successful delete
+                fetcharticleList();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
 
 
     return (
+        <div className="App">
+            <div className="sidebar">
+                <h3 className="sidebar-heading">Admin Panel</h3>
+                <ul className="sidebar-menu">
+                    <li><a href="/dashboard">Dashboard</a></li>
 
-        <div>
-
-
-            
-
-
-
-
-            <MDBContainer fluid>
-
-                <MDBRow className='d-flex justify-content-center align-items-center'>
-                    <MDBCol lg='9' className='my-5'>
-
-                        <h1 class="text mb-4">Article </h1>
-
-                        <MDBCard>
-                            <MDBCardBody className='px-4'>
-
-                                <MDBRow className='align-items-center pt-4 pb-3'>
-
-                                    <MDBCol md='3' className='ps-5'  >
-                                        <h6 className="mb-0">Article Topic</h6>
-                                    </MDBCol>
-
-                                    <MDBCol md='9' className='pe-5'>
-                                        <MDBInput size='lg' id='form1' type='text' value={article_topic} onChange={(e) => setarticletopic(e.target.value)} />
-                                    </MDBCol>
-
-                                </MDBRow>
-
-                                <hr className="mx-n3" />
-                                <MDBRow className='align-items-center pt-4 pb-3'>
-
-                                    <MDBCol md='3' className='ps-5' >
-                                        <h6 className="mb-0">Artilce Description</h6>
-                                    </MDBCol>
-
-                                    <MDBCol md='9' className='pe-5'>
-                                        <MDBInput size='lg' id='form1' type='text' value={article_description} onChange={(e) => setarticledescription(e.target.value)} />
-                                    </MDBCol>
-
-                                </MDBRow>
-
-                                <hr className="mx-n3" />
-
-                                <MDBRow className='align-items-center pt-4 pb-3'>
-
-                                    <MDBCol md='3' className='ps-5' >
-                                        <h6 className="mb-0">Posted Date:</h6>
-                                    </MDBCol>
-
-                                    <MDBCol md='9' className='pe-5'>
-                                        <MDBInput size='lg' id='form2' type='email' value={article_publisheddate} onChange={(e) => setarticlepublisheddate(e.target.value)} />
-                                    </MDBCol>
-
-                                </MDBRow>
-
-                                <hr className="mx-n3" />
-
-                               
-
-
-                                <MDBBtn className='my-4' size='lg' onClick={handlePost}>Post Article</MDBBtn>
-
-                            </MDBCardBody>
-                        </MDBCard>
-
-                    </MDBCol>
-                </MDBRow>
-
-            </MDBContainer>
-
-            <div class="container-fluid">
-                <div class="row justify-content-around ">
-                    {articleList.map((item) => (
-                        <Card style={{ width: '18rem', 'marginBottom': '2rem' }}>
-
-                            <Card.Body>
-                                <Card.Title>Articletopic:
-                                    {item.article_topic}</Card.Title>
-                                <Card.Text>
-                                    {item.article_description}
-                                </Card.Text>
-                                <Card.Text>
-                                    {item.article_publisheddate}
-                                </Card.Text>
-
-                                <Card.Text>
-                                    {item.posted_by}
-                                </Card.Text>
-
-
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    )
-                    )
-                    }
-                </div>
-
-
-<Footer/>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Donations</a></li>
+                </ul>
             </div>
 
-        </div>
+            <div className="content">
+                <h2 className='mb-3 text-start'>Add Article</h2>
+
+                <Form>
+                    <div className="row">
+                        <div className="col">
+                            <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
+                                <Form.Label >Article Name</Form.Label>
+                                <Form.Control type="text" placeholder="Enter Article Name" value={article_name} onChange={(e) => setarticlename(e.target.value)} />
+                            </Form.Group>
+                        </div>
+                        <div className="mb-3">
+                            <label for="formFile" className="form-label">Article File</label>
+                            <input className="form-control" type="file" id="formFile" onChange={
+                                (e) => {
+                                    let file = e.target.files[0];
+                                    setarticlefile(file)
+
+                                }
+                            } />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col">
+                            <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
+                                <Form.Label>Article Description</Form.Label>
+                                <Form.Control type="text" placeholder="Enter Article description" value={article_description} onChange={(e) => setarticledescription(e.target.value)} />
+                            </Form.Group>
+                        </div>
+                        <div className="col">
+                            <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
+                                <Form.Label>article type</Form.Label>
+                                <Form.Control type="text" placeholder="Enter your article type" value={article_type} onChange={(e) => setarticletype(e.target.value)} />
+                            </Form.Group>
+                        </div>
+                        
+                    </div>
+
+
+                    <Button variant="primary" type="submit" onClick={handleArticle}>
+                        Submit
+                    </Button>
+                </Form>
+
+                <h2 className='mt-5 mb-3 text-start'>Artilce Details</h2>
+
+                <Table responsive>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Article Name</th>
+                            <th>Article Description</th>
+                            <th>Article type</th>
+                            <th>Article File</th>
+                           
+
+                            <th colSpan={2}>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {
+                            articleList.map((article) => (
+                                <tr key={article.Id}>
+                                    <td>{article.Id}</td>
+                                    <td>{article.article_name}</td>
+
+                                    <td>{article.article_description}</td>
+                                    <td>{article.article_type}</td>
+    
+                                    <td><img width={100} src={`http://localhost:10000/public/src/Assests/${article.article_file}`}/></td>
+                        
+                                    <td><Button variant="danger" onClick={()=>handleDelete(article.Id)}>Delete</Button></td>
+                                </tr>
+                            ))
+                        }
+
+                    </tbody>
+                </Table>
+               </div>
+               </div>
     )
 }
-
 
 export default NgoArticle;

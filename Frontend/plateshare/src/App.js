@@ -5,7 +5,7 @@ import About from "./pages/Home/About";
 import Login from "./pages/Home/Login";
 import Menu from "./pages/Home/Menu";
 import Registration from "./pages/Home/Registration";
-import Cartpage from "./pages/Home/Cartpage";
+
 import AdminDashboard from "./admin/AdminDashboard";
 import MenuDash from "./admin/MenuDash";
 import Recipe from "./pages/Home/Recipe";
@@ -20,6 +20,7 @@ import Ngoevent from "./Ngo/Ngoevent";
 import Event from "./pages/Home/Event";
 import AdminDonation from "./admin/AdminDonation";
 import NgoDonation from "./Ngo/NgoDonation";
+import AdminOrder from "./admin/AdminOrder";
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
           < Route path="/Login" element={<Login />} />
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Registration" element={<Registration />} />
-          <Route path="/CartPage" element={<Cartpage />} />
+        
           <Route path="/AdminDashboard" element={<AdminDashboard />} />
           <Route path="/MenuDash" element={<MenuDash />} />
           <Route path="/Recipe" element={<Recipe />} />
@@ -45,6 +46,7 @@ function App() {
           <Route path="/Event" element={<Event/>}/>
           <Route path="/AdminDonation" element={<AdminDonation/>}/>
           <Route path="/NgoDonation" element={<NgoDonation/>}/>
+          <Route path="/AdminOrder" element={<AdminOrder/>}/>
          
          
         </Routes>

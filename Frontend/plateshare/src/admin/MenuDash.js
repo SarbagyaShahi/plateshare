@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
 import  Modal  from 'react-bootstrap/Modal';
+import Footer from '../components/Footer';
 
 
 function MenuDash() {
@@ -299,6 +300,7 @@ const openModal =(menuList) => {
                         </Modal.Body>
                     </Modal>
                 </div>
+                
             </div>
         </div>
     );

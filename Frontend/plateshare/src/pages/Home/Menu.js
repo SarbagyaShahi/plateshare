@@ -1,31 +1,14 @@
 import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import Header from "../../components/Header";
 import Card from "react-bootstrap/Card";
-
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
-import Footer from "../../components/Footer";
 import Table from "react-bootstrap/Table";
-
-import {
-  MDBBtn,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBTextArea,
-  MDBFile,
-} from "mdb-react-ui-kit";
 
 function Menu() {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  console.log(cart);
   function addToCart(data) {
     setCart([...cart, data]);
   }
@@ -91,7 +74,6 @@ function Menu() {
         setLocation([center.lat, center.lng]);
         onLocationChange([center.lat, center.lng]);
       });
-      console.log(location);
     }
   }, [onLocationChange]);
 
@@ -99,30 +81,26 @@ function Menu() {
 
   const createOrder = async (e) => {
     e.preventDefault();
-
-    let formData = new FormData();
-    formData.append("order_name", cart.menu_name);
-    formData.append("order_type", cart.menu_type);
-    formData.append("order_price", cart.menu_price);
-    formData.append("order_location", address);
-
     let addOrder = 'http://localhost:10000/Order/create_order'
-
     let addOrderResponse = await fetch(addOrder, {
       method: "POST",
-      body: formData,
+      headers:{
+        "content-type":"application/json"
+      },
+      body: JSON.stringify({
+        order_items:cart.map(car=>car.Id),
+        order_locations:address
+      }),
     });
-
     let addOrderJson = await addOrderResponse.json();
-
-  console.log(addOrderJson);
+    return addOrderJson
   };
 
   return (
     <div>
       <Header />
       <div class="container-fluid">
-        <h1>Enjoy Our Menu</h1>
+       
 
         <div class="row justify-content-around ">
           {menuList.map((item) => (
