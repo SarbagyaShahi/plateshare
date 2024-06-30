@@ -1,0 +1,28 @@
+.pagination > button {
+    background-color: #1a4d2e;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+  
+  .pagination > button:hover {
+    background-color: #12372a;
+  }
+  
+  .pagination > span {
+    font-size: 1rem;
+    color: #12372a;
+    font-weight: 900;
+    padding: 0.5rem 2rem;
+  }
+  
+  .pagination > button:disabled {
+    background-color: #f2f2f2;
+    color: #12372a;
+    cursor: not-allowed;
+  }

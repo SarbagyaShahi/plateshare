@@ -17,12 +17,15 @@
 .sidebar-heading {
     padding: 10px 20px;
 }
+.sidebar >ul li{
+    list-style: none;
 
+}ß
 .sidebar-menu {
     padding: 10px 20px;
 }
 
-.sidebar-menu a {
+.sidebar-menu a,i {
     display: block;
     color: #fff;
     padding: 10px;
@@ -40,7 +43,7 @@
 }
 
 .active {
-    background-color: #555;
+    background-color: white;
 }
 
 .content>Form {

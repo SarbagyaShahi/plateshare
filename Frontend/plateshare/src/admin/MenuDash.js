@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
 import  Modal  from 'react-bootstrap/Modal';
 import Footer from '../components/Footer';
+import swal from "sweetalert";
 
 
 function MenuDash() {
@@ -23,6 +24,12 @@ const closeModal =()=>{
 }
 const openModal =(menuList) => {
     setModelIsOpen(true);
+    setmenuId(menuList.menu_Id);
+    setmenuname(menuList.menu_name);
+    setmenutype(menuList.menu_type);
+    setmenuprice(menuList.menu_price);
+    setmenurating(menuList.menu_rating);
+
 }
 
 
@@ -119,6 +126,7 @@ const openModal =(menuList) => {
               
 
             });
+            window.location.reload();
     }
 
     const handleDelete = (Id) => {
@@ -137,6 +145,24 @@ const openModal =(menuList) => {
                 console.error('Error:', error);
             });
     }
+    const handleLogout = () => {
+        swal({
+          title: "Log out?",
+          text: "Are you sure want to log out?",
+          buttons: true,
+          dangerMode: true,
+        }).then((willDelete) => {
+          if (willDelete) {
+            fetch("http://localhost:10000/auth/logout", {
+              method: "GET",
+              credentials: "include",
+            });
+            localStorage.clear();
+            swal("See you soon!", "", "success");
+            window.location = "http://localhost:3000/";
+          }
+        });
+      };
 
 
     return (
@@ -144,12 +170,22 @@ const openModal =(menuList) => {
             <div className="sidebar">
                 <h3 className="sidebar-heading">Admin Panel</h3>
                 <ul className="sidebar-menu">
-                    <li><a href="/dashboard">Dashboard</a></li>
-
-                    <li><a href="#">Order</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Donations</a></li>
-                </ul>
+          <li>
+            <a href="/AdminDashboard">Dashboard</a>
+          </li>
+          <li>
+            <a href="/AdminOrder">Order</a>
+          </li>
+          <li>
+            <a href="/MenuDash">Menu </a>
+          </li>
+          <li>
+            <a href="AdminDonation">Donations</a>
+          </li>
+          <li onClick={handleLogout}>
+            <i class="fa-solid fa-right-from-bracket"> </i> signout
+          </li>
+        </ul>
             </div>
 
             <div className="content">
@@ -230,7 +266,7 @@ const openModal =(menuList) => {
                                     <td>{menu.menu_price}</td>
                                     <td>{menu.menu_rating}</td>
                                     <td><img width={100} src={`http://localhost:10000/public/images/${menu.menu_Image}`}/></td>
-                                    <td><Button variant="primary" onClick={()=>openModal(menuList)}>Edit</Button></td>
+                                    <td><Button variant="primary" onClick={()=>openModal(menu)}>Edit</Button></td>
                                     <td><Button variant="danger" onClick={()=>handleDelete(menu.Id)}>Delete</Button></td>
                                 </tr>
                             ))

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
 
 import { Table } from "react-bootstrap";
+import swal from "sweetalert";
 
 function AdminOrder() {
   const [orderList, setorderList] = useState([]);
@@ -16,6 +17,24 @@ function AdminOrder() {
       .catch((error) => {
         console.error("Error:", error);
       });
+  };
+  const handleLogout = () => {
+    swal({
+      title: "Log out?",
+      text: "Are you sure want to log out?",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        fetch("http://localhost:10000/auth/logout", {
+          method: "GET",
+          credentials: "include",
+        });
+        localStorage.clear();
+        swal("See you soon!", "", "success");
+        window.location = "http://localhost:3000/";
+      }
+    });
   };
   useEffect(() => {
     fetchOrderList();
@@ -43,18 +62,19 @@ function AdminOrder() {
         <h3 className="sidebar-heading">Admin Panel</h3>
         <ul className="sidebar-menu">
           <li>
-            <a href="#" className="active">
-              Dashboard
-            </a>
+            <a href="/AdminDashboard">Dashboard</a>
           </li>
           <li>
-            <a href="/order">Order</a>
+            <a href="/AdminOrder">Order</a>
           </li>
           <li>
             <a href="/MenuDash">Menu </a>
           </li>
           <li>
-            <a href="#">Donations</a>
+            <a href="AdminDonation">Donations</a>
+          </li>
+          <li onClick={handleLogout}>
+            <i class="fa-solid fa-right-from-bracket"> </i> signout
           </li>
         </ul>
       </div>
@@ -86,43 +106,39 @@ function AdminOrder() {
               </Card.Body>
             </Card>
           ))} */}
-          
-          <h2 className="mt-5 mb-3 text-start">Order Details</h2>
 
+          <h2 className="mt-5 mb-3 text-start">Order Details</h2>
+          {console.log(orderList)}
           <Table responsive>
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Order_items:</th>
                 <th>Order Price</th>
-                
-                <th>Order Location</th>
-                
 
-        
+                <th>Order Location</th>
+                <th>Ordered by</th>
+               
               </tr>
             </thead>
 
             <tbody>
-              {orderList.map((orderList) => (
-                <tr key={orderList.Id}>
-                  <td>{orderList.Id}</td>
-                  <td>{orderList.items.map(item=>item.menu_name)}</td>
-                  <td>{orderList.items.map(item=>item.menu_price)}</td>
-
-                  <td>{orderList.order_location}</td>
-                  
-
-                  <td>
-                    
-                  </td>
-                </tr>
-              ))}
+              {orderList &&
+                orderList.map((orderList) => (
+                  <tr key={orderList.Id}>
+                    <td>{orderList.Id}</td>
+                    <td>{orderList.items.map((item) => (<p>{item.menu_name}</p>))}</td>
+                    <td>{orderList.order_totalprice}</td>
+                    <td>{orderList.order_location}</td>
+                    <td>{orderList.ordered_by}</td>
+      
+                    <td></td>
+                  </tr>
+                ))}
             </tbody>
           </Table>
         </div>
       </div>
-    
     </div>
   );
 }

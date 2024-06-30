@@ -20,11 +20,38 @@ import {
 } from "mdb-react-ui-kit";
 
 function Donation() {
+  const cookie= document.cookie;
+  console.log(cookie)
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+  
+  // Usage:
+  const _name = getCookie('userName');
+  const name=decodeURIComponent(_name)
+
+  
   const [donate_name,setdonatename] =useState("");
-  const [donated_by,setdonatedby] = useState("");
-  const [donated_time,setdonatedtime] = useState("");
+
+
   const [donated_price,setdonatedprice] = useState("");
   const [donation_location,setdonationlocation] = useState("");
+
+  const getInitialCount = () => {
+    const savedCount = localStorage.getItem('count');
+    return savedCount !== null ? Number(savedCount) : 0;
+  };
+
+  const [count, setCount] = useState(getInitialCount);
+
+  useEffect(() => {
+ 
+    localStorage.setItem('count', count);
+  
+    
+  }, [count]);
 
   const handlePost = async (e) => {
     e.preventDefault();
@@ -32,8 +59,8 @@ function Donation() {
     let formData = new FormData();
 
     formData.append("donate_name",donate_name);
-    formData.append("donated_by",donated_by);
-    formData.append("donated_time",donated_time);
+    formData.append("donated_by",name);
+
     formData.append("donated_price",donated_price);
     formData.append("donation_location",donation_location);
 
@@ -49,13 +76,17 @@ function Donation() {
     console.log(parsedData);
     console.log(formData);
 
-    if (addDonateResponse.status === 201) {
-      alert("You have successfully donated the food");
-      setdonatename("");
-      setdonatedtime("");
-      setdonatedprice("");
-      setdonationlocation("");
-      setdonatedby("");
+    if (addDonateResponse.status === 200) {
+      alert("You have successfully donated the food our team will connect to you");
+      setCount(prevCount => {
+        const newCount = prevCount + 1;
+        if (newCount === 3) {
+          alert('Count is 3');
+          return 0; // Reset count to 0 if it reaches 3
+        }
+        return newCount;
+      });
+      window.location.reload();
     } else {
       if (parsedData.donate_name) {
         alert(parsedData.donate_name);
@@ -65,9 +96,7 @@ function Donation() {
         alert(parsedData.donation_location);
       } else if (parsedData.donated_price) {
         alert(parsedData.donated_price);
-      } else if (parsedData.donated_time) {
-        alert(parsedData.donated_time);
-      }
+      } 
     }
   };
 
@@ -90,16 +119,19 @@ function Donation() {
   useEffect(() => {
     fetchDonateList();
   }, []);
-  
+
 
   return (
     <div>
       <Header />
 
+
       <MDBContainer fluid>
         <MDBRow className="d-flex justify-content-center align-items-center">
           <MDBCol lg="9" className="my-5">
+            
             <h1 class="text mb-4">Donation </h1>
+            <p>Donate Food save life</p>
 
             <MDBCard>
               <MDBCardBody className="px-4">
@@ -156,21 +188,8 @@ function Donation() {
 
                 <hr className="mx-n3" />
 
-                <MDBRow className="align-items-center pt-4 pb-3">
-                  <MDBCol md="3" className="ps-5">
-                    <h6 className="mb-0">Donation time</h6>
-                  </MDBCol>
-
-                  <MDBCol md="9" className="pe-5">
-                    <MDBTextArea
-                      id="textAreaExample"
-                      rows={3}
-                      value={donated_time}
-                      onChange={(e) => setdonatedtime(e.target.value)}
-                    />
-                  </MDBCol>
-                </MDBRow>
-                <MDBRow className="align-items-center pt-4 pb-3">
+              
+                {/* <MDBRow className="align-items-center pt-4 pb-3">
                   <MDBCol md="3" className="ps-5">
                     <h6 className="mb-0">Donated by</h6>
                   </MDBCol>
@@ -183,45 +202,16 @@ function Donation() {
                       onChange={(e) => setdonatedby(e.target.value)}
                     />
                   </MDBCol>
-                </MDBRow>
-                <MDBBtn className="my-4" size="lg" onClick={handlePost}>
-                  Donate
-                </MDBBtn>
+                </MDBRow> */}
+               
+                <button  class="btn btn-primary btn-block" onClick={handlePost}>Donate</button>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
 
-      <div class="container-fluid">
-        <div class="row justify-content-around ">
-          {donateList.map((item) => (
-            <Card style={{ width: "18rem", marginBottom: "2rem" }}>
-              <Card.Body>
-                <Card.Title>
-                  Food Name:
-                  {item.donate_name}
-                </Card.Title>
-                <Card.Text>
-                  <Card.Title> Location</Card.Title>
-                  {item.donated_location}
-                </Card.Text>
-                <Card.Text>
-                  <Card.Title>Price</Card.Title>
-                  {item.donated_price}
-                </Card.Text>
-
-                <Card.Text>
-                  <Card.Title>Donated by</Card.Title>
-                  {item.donated_by}
-                </Card.Text>
-
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-      </div>
+    
       <Footer />
     </div>
   );

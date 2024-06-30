@@ -3,8 +3,28 @@ import { useState, useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
 import Footer from "../components/Footer";
 import { Table } from "react-bootstrap";
-
+import swal from "sweetalert";
 function NgoDonation() {
+
+  const handleLogout = () => {
+    swal({
+      title: "Log out?",
+      text: "Are you sure want to log out?",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        fetch("http://localhost:10000/auth/logout", {
+          method: "GET",
+          credentials: "include",
+        });
+        localStorage.clear();
+        swal("See you soon!", "", "success");
+        window.location = "http://localhost:3000/";
+      }
+    });
+  }; 
+
   const [donateList, setdonateList] = useState([]);
   const fetchDonateList = () => {
     fetch("http://localhost:10000/donate/get_donate")
@@ -39,25 +59,20 @@ function NgoDonation() {
 
   return (
     <div>
-      <div className="sidebar">
-        <h3 className="sidebar-heading">Admin Panel</h3>
-        <ul className="sidebar-menu">
-          <li>
-            <a href="#" className="active">
-              Dashboard
-            </a>
+     <div className="sidebar">
+                <h3 className="sidebar-heading">Ngo Panel</h3>
+                <ul className="sidebar-menu">
+                    <li><a href="/NgoDashboard">Ngo pannel</a></li>
+
+                    <li><a href="/NgoDonation">Donation</a></li>
+                    <li><a href="/NgoArticle">Article</a></li>
+                    <li><a href="/NgoEvent">Event</a></li>
+                 
+                    <li onClick={handleLogout}>
+            <i class="fa-solid fa-right-from-bracket"> </i> signout
           </li>
-          <li>
-            <a href="/order">Order</a>
-          </li>
-          <li>
-            <a href="/MenuDash">Menu </a>
-          </li>
-          <li>
-            <a href="#">Donations</a>
-          </li>
-        </ul>
-      </div>
+                </ul>
+            </div>
 
       <div class="content">
         <div class="row justify-content-around ">

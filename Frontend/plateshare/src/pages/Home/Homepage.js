@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
+    
     return (
         <section className="hero_section">
             <Container>

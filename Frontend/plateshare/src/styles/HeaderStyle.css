@@ -1,6 +1,6 @@
 /*header Css */
 header .navbar {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     background-color: white;
     z-index: 1000;

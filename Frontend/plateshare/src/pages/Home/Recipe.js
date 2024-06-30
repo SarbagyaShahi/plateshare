@@ -2,11 +2,12 @@ import React from "react";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from "react-bootstrap/Modal";
-
+import "../../styles/Articles.css";
 import Header from "../../components/Header";
 import Card from 'react-bootstrap/Card';
 import { useEffect } from "react";
 import Footer from "../../components/Footer";
+import "../../styles/Recipe.css";
 
 import {
   MDBBtn,
@@ -28,6 +29,19 @@ function Recipe() {
   const [posted_by, setpostedby] = useState("");
   const [post_description, setpostdescription] = useState("");
 
+
+    const cookie= document.cookie;
+    console.log(cookie)
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    
+    // Usage:
+    const _name = getCookie('userName');
+    const name=decodeURIComponent(_name)
+  
   const handlePost = async (e) => {
     e.preventDefault();
 
@@ -37,8 +51,8 @@ function Recipe() {
     formData.append('post_name', post_name);
     formData.append('posted_ingredients', posted_ingredients);
     formData.append('post_description', post_description);
-    formData.append('posted_by', posted_by);
-
+    formData.append('posted_by', name);
+    
 
     let addPost = 'http://localhost:10000/post/create_post'
 
@@ -52,14 +66,9 @@ function Recipe() {
     console.log(parsedData);
     console.log(formData)
 
-    if (addPostResponse.status === 201) {
+    if (addPostResponse.status === 200) {
       alert('Recipe Posted successfully');
-      setpostname('');
-      setpostedingredients('');
-      setpostdescription('');
-      setpostedby('');
-
-
+      window.location.reload();
 
     }
 
@@ -101,8 +110,21 @@ function Recipe() {
   useEffect(() => {
     fetchRecipeList()
   }, [])
+  
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(2);
 
+  
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPost = recipeList.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo(0, 0);
+  };
 
   return (
 
@@ -149,20 +171,7 @@ function Recipe() {
 
                 </MDBRow>
 
-                <hr className="mx-n3" />
-
-                <MDBRow className='align-items-center pt-4 pb-3'>
-
-                  <MDBCol md='3' className='ps-5' >
-                    <h6 className="mb-0">Posted By:</h6>
-                  </MDBCol>
-
-                  <MDBCol md='9' className='pe-5'>
-                    <MDBInput size='lg' id='form2' type='email' value={posted_by} onChange={(e) => setpostedby(e.target.value)} />
-                  </MDBCol>
-
-                </MDBRow>
-
+          
                 <hr className="mx-n3" />
 
                 <MDBRow className='align-items-center pt-4 pb-3'>
@@ -177,8 +186,8 @@ function Recipe() {
 
                 </MDBRow>
 
-
-                <MDBBtn className='my-4' size='lg' onClick={handlePost}>Post Recipe</MDBBtn>
+             
+                <button  class="btn btn-primary btn-block" onClick={handlePost}>Post Recipe</button>
 
               </MDBCardBody>
             </MDBCard>
@@ -188,39 +197,44 @@ function Recipe() {
 
       </MDBContainer>
 
-      <div class="container-fluid">
-        <div class="row justify-content-around ">
-          {recipeList.map((item) => (
-            <Card style={{ width: '18rem', 'marginBottom': '2rem' }}>
-
-              <Card.Body>
-                <Card.Title>RecipeName:
-                  {item.post_name}</Card.Title>
-                <Card.Text>
-                  <Card.Title>Recipe Description</Card.Title>
-                    {item.post_description}
-                </Card.Text>
-                <Card.Text><Card.Title>Recipe Ingredients</Card.Title>
-                  {item.posted_ingredients}
-                </Card.Text>
-
-                <Card.Text><Card.Title> Posted by</Card.Title>
-                  {item.posted_by}
-                </Card.Text>
-
-
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          )
-          )
-          }
-          
-        </div>
-
-
-
+      <div className="home-container">
+        {currentPost.map((post, index) => (
+          <div className="contain" key={index}>
+            <div className="left"style={{width:"100%"}}>
+              <div className="heading">
+                <div className="title">{post.post_name}</div>
+              </div>
+              <div className="content"style={{margin:"0",padding:"0"}}>
+                <p><b>Ingredients:</b><br/>{post.posted_ingredients}</p>
+              </div>
+              <div className="content" style={{margin:"0",padding:"0"}}>
+                <p><b>Recipe:</b><br/>{post.post_description}</p>
+              </div>
+              <div className="content"style={{margin:"0",padding:"0"}}>
+                <p><b>Posted By:</b><br/>{post.posted_by}</p>
+              </div>
+              
+            </div>
+            
+          </div>
+        ))}
+        <div className="pagination">
+        <button
+          onClick={() => paginate(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        <span> {currentPage}</span>
+        <button
+          onClick={() => paginate(currentPage + 1)}
+          disabled={indexOfLastPost >= recipeList.length}
+        >
+          Next
+        </button>
       </div>
+      </div>
+
 <Footer/>
     </div>
    

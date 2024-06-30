@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import Table from "react-bootstrap/Table";
-
+import Footer from "../../components/Footer";
 function Menu() {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -13,6 +13,17 @@ function Menu() {
     setCart([...cart, data]);
   }
 
+  const cookie = document.cookie;
+  console.log(cookie);
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+  }
+
+  // Usage:
+  const _name = getCookie("userName");
+  const name = decodeURIComponent(_name);
   useEffect(() => {
     const calculateTotalPrice = () => {
       const total = cart.reduce(
@@ -55,7 +66,7 @@ function Menu() {
       const response = await fetch(
         `https://api.opencagedata.com/geocode/v1/json?q=${location[0]}+${location[1]}&key=12fb8a882afb473aafcc3be8ea7267cb`
 
-        // New API KEY
+        // New API KEY for reverser geocodingf
         // `https://api.opencagedata.com/geocode/v1/json?q=${location[0]}+${location[1]}&key=0f11663459b6469293821368875f9787`
       );
       const data = await response.json();
@@ -81,28 +92,36 @@ function Menu() {
 
   const createOrder = async (e) => {
     e.preventDefault();
-    let addOrder = 'http://localhost:10000/Order/create_order'
+    let addOrder = "http://localhost:10000/Order/create_order";
     let addOrderResponse = await fetch(addOrder, {
       method: "POST",
-      headers:{
-        "content-type":"application/json"
+      headers: {
+        "content-type": "application/json",
       },
+      credentials: "include",
       body: JSON.stringify({
-        order_items:cart.map(car=>car.Id),
-        order_locations:address
+        order_items: cart.map((car) => car.Id),
+        order_locations: address,
+        order_totalprice: totalPrice,
+        ordered_by: name,
       }),
     });
     let addOrderJson = await addOrderResponse.json();
-    return addOrderJson
+    if (addOrderResponse.status == 200) {
+      alert("Order Placed Successfully");
+      setCart([]);
+    } else {
+      alert("Order Failed");
+    }
+
+    // return addOrderJson
   };
 
   return (
     <div>
       <Header />
       <div class="container-fluid">
-       
-
-        <div class="row justify-content-around ">
+        <div class="row justify-content-around " style={{ marginTop: "2rem" }}>
           {menuList.map((item) => (
             <Card style={{ width: "18rem", marginBottom: "2rem" }}>
               <Card.Body>
@@ -204,7 +223,9 @@ function Menu() {
 
               <br />
 
-              <button className="btn btn-primary" onClick={createOrder}>Checkout</button>
+              <button className="btn btn-primary" onClick={createOrder}>
+                Checkout
+              </button>
             </div>
           </div>
         </div>

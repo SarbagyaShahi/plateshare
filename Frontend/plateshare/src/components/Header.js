@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../Assets/logo/logo.png";
@@ -7,11 +7,18 @@ import swal from "sweetalert";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   // const Location =userLocation();
   // const shouldDisplayNavbar = ![
   //   "./pages/home/Homepage"
   // ]
+  useEffect(()=> {
+    const getToken = document.cookie.split("=")[1];
+    if(getToken!== undefined)
+     {
+       setLoggedIn(true)
+     }
+  })
   const handleLogout = () => {
     swal({
       title: "Log out?",
@@ -21,15 +28,18 @@ const Header = () => {
     }).then((willDelete) => {
       if (willDelete) {
         fetch("http://localhost:10000/auth/logout", {
+
           method: "GET",
           credentials: "include",
+         
         });
+        localStorage.clear();
         swal("See you soon!", "", "success");
-        window.location="http://localhost:3000/Login"
+        window.location="http://localhost:3000"
       }
     });
   };
-
+ 
   // Scroll Navbar
 
   return (
@@ -73,8 +83,15 @@ const Header = () => {
                   <Nav.Link as={Link} to="/Recipe">
                     Recipes
                   </Nav.Link>
+                  <Nav.Link as={Link} to="/Event">
+                    Events
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/Donation">
+                    Donation
+                  </Nav.Link>
                   <Nav.Link onClick={handleLogout}>
                     <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
                   </Nav.Link>
                 </>
               )}

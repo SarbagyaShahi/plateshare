@@ -1,8 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
-import Footer from "../components/Footer";
+
 import { Table } from "react-bootstrap";
+import swal from "sweetalert";
 
 function AdminDonation() {
   const [donateList, setdonateList] = useState([]);
@@ -36,16 +37,31 @@ function AdminDonation() {
         console.error("Error:", error);
       });
   };
-
+  const handleLogout = () => {
+    swal({
+      title: "Log out?",
+      text: "Are you sure want to log out?",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        fetch("http://localhost:10000/auth/logout", {
+          method: "GET",
+          credentials: "include",
+        });
+        localStorage.clear();
+        swal("See you soon!", "", "success");
+        window.location = "http://localhost:3000/";
+      }
+    });
+  };
   return (
     <div>
       <div className="sidebar">
         <h3 className="sidebar-heading">Admin Panel</h3>
         <ul className="sidebar-menu">
           <li>
-            <a href="#" className="active">
-              Dashboard
-            </a>
+            <a href="/AdminDashboard">Dashboard</a>
           </li>
           <li>
             <a href="/AdminOrder">Order</a>
@@ -55,6 +71,9 @@ function AdminDonation() {
           </li>
           <li>
             <a href="AdminDonation">Donations</a>
+          </li>
+          <li onClick={handleLogout}>
+            <i class="fa-solid fa-right-from-bracket"> </i> signout
           </li>
         </ul>
       </div>
@@ -86,7 +105,7 @@ function AdminDonation() {
               </Card.Body>
             </Card>
           ))} */}
-          
+
           <h2 className="mt-5 mb-3 text-start">Donation Details</h2>
 
           <Table responsive>
@@ -98,8 +117,6 @@ function AdminDonation() {
                 <th>Donated by</th>
                 <th>Price</th>
                 <th>Manage Donation</th>
-
-        
               </tr>
             </thead>
 
@@ -127,7 +144,6 @@ function AdminDonation() {
           </Table>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

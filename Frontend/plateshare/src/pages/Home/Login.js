@@ -30,11 +30,17 @@ function Login() {
         }).then(data => {
             data.json().then(body => {
                 if (data.status === 200) {
-                    alert('Login Successful');
-                    if(data.role ==="admin"){
+                    if(body.role ==="admin"){
                         alert ("Admin Logged in sucessfully")
+                        window.location="http://localhost:3000/AdminDashboard"
+
+                    }
+                    else if(body.role ==="ngo"){
+                        alert("Ngo logged in sucessfully")
+                        window.location="http://localhost:3000/NgoDashboard"
                     }
                     else{
+                        alert('Login Successful');
                         window.location="http://localhost:3000/Menu"
                     }
 
