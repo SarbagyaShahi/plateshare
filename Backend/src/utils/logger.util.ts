@@ -4,6 +4,7 @@ import { Request } from "express"
 import dotenv from "dotenv"
 import path from "path"
 import { MailSendError } from "../lib/mailer.lib"
+
 dotenv.config()
 
 export class HttpLogger{

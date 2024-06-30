@@ -29,7 +29,7 @@ export class  EventController {
     @ImageSingle("food_image")
     async edit (req:AuthorizedRequest){
         let body =req.body
-        let message=this.service.getevents(body)
+        let message=this.service.Putevents(body)
         return message
     }
     @Delete("/delete_event")

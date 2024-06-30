@@ -1480,3 +1480,1626 @@ QueryFailedError: Field 'post_name' doesn't have a default value
 
 ----------------------------------------------------------------------------------------------------
 
+-----------------------------------/create_post 2024/4/0 12:12:24-----------------------------------
+
+QueryFailedError: Data too long for column 'posted_ingredients' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/0 12:13:31-----------------------------------
+
+QueryFailedError: Data too long for column 'posted_ingredients' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/0 12:13:59-----------------------------------
+
+QueryFailedError: Data too long for column 'posted_ingredients' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/0 12:16:24-----------------------------------
+
+QueryFailedError: Data too long for column 'posted_ingredients' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/0 12:50:12---------------------------------
+
+QueryFailedError: Field 'article_Image' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_article 2024/4/0 20:33:4----------------------------------
+
+QueryFailedError: Field 'article_Image' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_article 2024/4/0 20:33:6----------------------------------
+
+QueryFailedError: Field 'article_Image' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/0 20:33:52---------------------------------
+
+QueryFailedError: Field 'article_Image' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/0 20:42:10----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/0 20:42:11----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/0 20:42:11----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/0 20:42:12----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/0 20:42:13----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/0 20:42:13----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/0 20:42:14----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/1 11:13:49---------------------------------
+
+QueryFailedError: Field 'article_Image' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/1 11:13:51---------------------------------
+
+QueryFailedError: Field 'article_Image' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/1 11:13:52---------------------------------
+
+QueryFailedError: Field 'article_Image' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/1 11:13:52---------------------------------
+
+QueryFailedError: Field 'article_Image' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/1 11:14:15---------------------------------
+
+QueryFailedError: Field 'article_Image' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2024/4/1 13:3:59-----------------------------------
+
+QueryFailedError: Incorrect integer value: 'ad' for column `plateshare`.`event`.`event_time` at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2024/4/1 13:4:3-----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:39:56----------------------------------
+
+QueryFailedError: Data truncated for column 'donated_time' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:39:58----------------------------------
+
+QueryFailedError: Data truncated for column 'donated_time' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:40:13----------------------------------
+
+QueryFailedError: Data truncated for column 'donated_time' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:41:39----------------------------------
+
+QueryFailedError: Data truncated for column 'donated_time' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:41:40----------------------------------
+
+QueryFailedError: Data truncated for column 'donated_time' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:41:54----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:42:1----------------------------------
+
+QueryFailedError: Incorrect integer value: 'sdad' for column `plateshare`.`donate`.`donated_time` at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:44:36----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:50:0----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:50:19----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:52:0----------------------------------
+
+QueryFailedError: Field 'donated_time' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/1 13:52:11----------------------------------
+
+QueryFailedError: Field 'donated_time' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/1 13:59:25-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/1 13:59:59-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/4/1 14:30:32----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2024/4/1 14:31:9-----------------------------------
+
+QueryFailedError: Incorrect integer value: 'das' for column `plateshare`.`event`.`event_time` at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/4/1 14:59:31----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/4/1 14:59:36----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2024/4/1 15:6:58-----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2024/4/1 15:6:59-----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_donate 2024/4/2 21:16:22----------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:48:34------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:31:26)
+    at GlobalStore.verify_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:78:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:38:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:52:30------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:31:26)
+    at GlobalStore.verify_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:78:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:38:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:52:31------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:31:26)
+    at GlobalStore.verify_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:78:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:38:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:52:32------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:31:26)
+    at GlobalStore.verify_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:78:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:38:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:52:32------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:31:26)
+    at GlobalStore.verify_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:78:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:38:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:52:54------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:52:55------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:53:24------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:31:26)
+    at GlobalStore.verify_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:78:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:38:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:55:38------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:31:26)
+    at GlobalStore.verify_staff_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:78:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:38:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 10:57:39------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/4 11:2:46------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/5 20:48:0------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/5 20:53:5------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/5 20:54:48------------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'role')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:28:21)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.read (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:78:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/5 20:58:26------------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'role')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:28:21)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.read (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:78:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/5 20:58:53------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/5 21:20:52------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_order 2024/4/5 21:23:53------------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/5 21:24:54----------------------------------
+
+JsonWebTokenError: invalid signature
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at GlobalStore._validate_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:26:26)
+    at GlobalStore.verify_login_token (/Users/sarbagyashahi/fyp/plateshare/Backend/src/store/store.global.ts:70:25)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:15:45)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:14:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/guards/role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/5 21:55:54----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:19:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 17:51:40----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 17:59:27----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 18:17:37-----------------------------------
+
+QueryFailedError: Field 'posted_ingredients' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 18:18:18-----------------------------------
+
+QueryFailedError: Field 'posted_ingredients' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 18:19:15-----------------------------------
+
+QueryFailedError: Field 'posted_ingredients' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 18:20:20-----------------------------------
+
+QueryFailedError: Field 'posted_ingredients' doesn't have a default value
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 18:39:11----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 20:17:47-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 20:17:48-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 20:18:8-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/6 20:45:57---------------------------------
+
+QueryFailedError: Data too long for column 'article_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/6 20:45:59---------------------------------
+
+QueryFailedError: Data too long for column 'article_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/6 20:45:59---------------------------------
+
+QueryFailedError: Data too long for column 'article_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2024/4/6 20:45:59---------------------------------
+
+QueryFailedError: Data too long for column 'article_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 21:55:17----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_article 2024/4/6 22:1:7----------------------------------
+
+QueryFailedError: Data too long for column 'article_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_article 2024/4/6 22:2:27----------------------------------
+
+QueryFailedError: Data too long for column 'article_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_article 2024/4/6 22:2:52----------------------------------
+
+QueryFailedError: Data too long for column 'article_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_article 2024/4/6 22:4:6----------------------------------
+
+QueryFailedError: Data too long for column 'article_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 22:13:6-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 22:13:8-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 22:13:8-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 22:13:8-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_post 2024/4/6 22:13:8-----------------------------------
+
+QueryFailedError: Data too long for column 'post_description' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 22:17:25----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 22:19:23----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 22:20:25----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_order 2024/4/6 22:21:0-----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 22:24:17----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 22:24:29----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 22:31:21----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 22:39:26----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 22:39:57----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_order 2024/4/6 22:48:52----------------------------------
+
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:20:66)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:42:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:23:53)
+    at /Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:13:12)
+    at OrderController.create (/Users/sarbagyashahi/fyp/plateshare/Backend/src/routes/Order/Order.controller.ts:59:16)
+    at OrderController.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:116:46)
+    at step (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:33:23)
+    at Object.next (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/bind.ts:14:53)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2024/4/6 23:9:56-----------------------------------
+
+QueryFailedError: Data truncated for column 'event_time' at row 1
+    at Query.onResult (/Users/sarbagyashahi/fyp/plateshare/Backend/src/driver/mysql/MysqlQueryRunner.ts:246:33)
+    at Query.execute (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/commands/command.js:36:14)
+    at PoolConnection.handlePacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:481:34)
+    at PacketParser.onPacket (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:97:12)
+    at PacketParser.executeStart (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/node_modules/mysql2/lib/connection.js:104:25)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/4/6 23:59:44----------------------------------
+
+Error: MimeType or size doesn't match
+    at new FileSizeExceed (/Users/sarbagyashahi/fyp/plateshare/Backend/src/middleware/error.middleware.ts:57:14)
+    at FileStream.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/imageHandler.ts:157:43)
+    at FileStream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/4/6 23:59:45----------------------------------
+
+Error: MimeType or size doesn't match
+    at new FileSizeExceed (/Users/sarbagyashahi/fyp/plateshare/Backend/src/middleware/error.middleware.ts:57:14)
+    at FileStream.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/imageHandler.ts:157:43)
+    at FileStream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/4/6 23:59:45----------------------------------
+
+Error: MimeType or size doesn't match
+    at new FileSizeExceed (/Users/sarbagyashahi/fyp/plateshare/Backend/src/middleware/error.middleware.ts:57:14)
+    at FileStream.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/imageHandler.ts:157:43)
+    at FileStream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/4/6 23:59:46----------------------------------
+
+Error: MimeType or size doesn't match
+    at new FileSizeExceed (/Users/sarbagyashahi/fyp/plateshare/Backend/src/middleware/error.middleware.ts:57:14)
+    at FileStream.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/imageHandler.ts:157:43)
+    at FileStream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2024/4/6 23:59:46----------------------------------
+
+Error: MimeType or size doesn't match
+    at new FileSizeExceed (/Users/sarbagyashahi/fyp/plateshare/Backend/src/middleware/error.middleware.ts:57:14)
+    at FileStream.<anonymous> (/Users/sarbagyashahi/fyp/plateshare/Backend/src/lib/imageHandler.ts:157:43)
+    at FileStream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+----------------------------------------------------------------------------------------------------
+

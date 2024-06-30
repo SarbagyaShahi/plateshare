@@ -21,8 +21,8 @@ export const login_schema=yup.object().shape({
 })
 
 export const register_schema=yup.object().shape({
-    email:yup.string().required(),
-    password:yup.string().required(),
+    email:yup.string().required().email("Email is invalid"),
+    password:yup.string().required().min(8),
     confirmPassword:yup.string().required(),
     number:yup.string(),
     address:yup.string().required(),

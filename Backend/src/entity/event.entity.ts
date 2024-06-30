@@ -15,5 +15,4 @@ export class event extends GlobalEntity {
     event_description:string
     @Column()
     event_Image:string
-
 }

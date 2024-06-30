@@ -4,11 +4,13 @@ import { orderDto } from './Order.dto';
 import { InvalidInputError } from '../../middleware/error.middleware';
 import { menuModel } from '../../model/menu.model';
 import { In } from 'typeorm';
+import { UserModel } from '../../model/user.model';
 
 export class OrderService {
     constructor(
         private order_model = new orderModel(),
-        private menu_model=new menuModel()
+        private menu_model=new menuModel(),
+        private user_model=new UserModel()
     ) {}
 
     async createorder(create: orderDto) {
@@ -22,10 +24,11 @@ export class OrderService {
             throw new InvalidInputError("No food found")
         orders.order_location = create.order_locations;
         orders.items=foodItem
-        orders.order_price =order_price;
-        console.log(orders)
+
+        orders.order_totalprice =order_price;
+        orders.ordered_by=create.ordered_by;
         await this.order_model.save(orders)
-        return ('order is created')
+        return {status:200,message:'Ordered suceessfully'}
     }
 
     async getorders(read:orderDto){
@@ -33,11 +36,5 @@ export class OrderService {
         return {data:orders}
     }
 
-    async Deleteorders(Delete: string) {
-        let orders = await this.order_model.findOne({where:{Id:Delete}})
-        if(!orders)
-            throw new InvalidInputError("No id found")
-        await this.order_model.delete(orders)
-        return ('menu is deleted')
-    }
+
 }

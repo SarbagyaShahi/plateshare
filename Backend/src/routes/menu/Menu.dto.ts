@@ -5,5 +5,5 @@ export interface menuDto{
     menu_Id?:string,
     menu_price?:number,
     menu_Image?:string,
-    menu_rating?:number  
+    menu_rating?:number,
 }

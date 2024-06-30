@@ -28,14 +28,16 @@ export class  DonateController {
         let message=this.service.getdonation(body)
         return message
     }
-    // @Delete("/delete_post")
-    // async Delete (req:AuthorizedRequest){
-    //     let param:{id?:string} =req.query
-    //     if(!param.id)
-    //             throw new InvalidInputError("No id found")
-    //     let message=this.service.Deletedonation(param.id)
-    //     return message
-    // }
+    @Delete("/delete_donate")
+    async Delete (req:AuthorizedRequest){
+        let param:{id?:string} =req.query
+        if(!param.id)
+                throw new InvalidInputError("No id found")
+        let message=this.service.Deletedonate(param.id)
+        return message
+    }
+
+   
     
     }
 

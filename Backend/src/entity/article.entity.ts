@@ -5,7 +5,12 @@ import { ImageField } from '../lib/imageHandler';
 
 @Entity()
 export class article extends GlobalEntity{
+  
     @Column()
-    article_name:string
+    article_name: string
+    @Column()
+    article_description: string
+    @Column()
+    article_Image:string
 }
 

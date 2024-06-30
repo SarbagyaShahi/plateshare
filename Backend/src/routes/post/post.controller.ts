@@ -4,19 +4,19 @@ import { AuthorizedRequest } from "../../typings/base.type"
 import { postService } from "./post.service"
 import { ImageSingle } from '../../lib/imageHandler';
 import { InvalidInputError } from '../../middleware/error.middleware';
+import { post_schema } from "./post.dto";
 
 
 @Controller("/post")
 export class  PostController {  
     constructor(
         private service=new postService()
-    ) {
-    }
+    ) {}
 
     @Post("/create_post")
     @ImageSingle("we")
     async create (req:AuthorizedRequest){
-        let body =req.body
+        let body =post_schema.validateSync(req.body)
         console.log(req.body)
         let message=this.service.createpost(body)
         return message

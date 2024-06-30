@@ -19,8 +19,6 @@ export class User extends GlobalEntity{
     @Column()
     User_Phone: string;
 
-   
-
     @Column({type:"enum",enum:Role,default:Role.USER})
     role:Role
 }

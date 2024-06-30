@@ -11,25 +11,27 @@ export class donateService {
     async createdonate(create: donateDto) {
 
         //   let order_name= await this.order_model.findOne({where:{ordername : create.ordername}}); 
-        let donation = new donate()//檢
+        let donation = new donate()
         donation.donate_name = create.donate_name;
         donation.donated_by = create.donated_by;
-       donation.donated_time=create.donated_time;
+   
         donation.donated_price = create.donated_price;
         donation.donation_location=create.donation_location
         await this.donate_model.create(donation)
-        return ("You have donated")
+        return {status:200,message:'Food is donated our team will connect to you soon'}
     }
     async getdonation(read: donateDto) {
-        let donation = await this.donate_model.find({});
+        let donation = await this.donate_model.find({
+        });
         return { data: donation }
+        
     }
-    // async Deletedonation(Delete: string) {
-    //     let donation = await this.donate_model.findOne({where:{Id:Delete}})
-    //     if(!donation)
-    //         throw new InvalidInputError("No id found")
-    //     await this.donate_model.delete(donation)
-    //     return ('menu is deleted')
-    // }
-
+    async Deletedonate(Delete: string) {
+        let donate = await this.donate_model.findOne({where:{Id:Delete}})
+        if(!donate)
+            throw new InvalidInputError("No id found")
+        await this.donate_model.delete(donate)
+        return {status:200,message:'donation is deleted'}
+    }
+  
 }

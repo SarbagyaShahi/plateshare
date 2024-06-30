@@ -19,6 +19,8 @@ export class menu extends GlobalEntity{
     @Column()
     
     menu_rating:number
+
+   
     
 
 

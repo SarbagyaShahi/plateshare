@@ -92,7 +92,8 @@ export interface VerificaitonRequest extends Request{
 
 export interface AuthorizedRequest extends Request{
     user:{
-        userId:string
+        userId:string,
+        role:Role
     }
     token:string
 }

@@ -9,36 +9,34 @@ export class GlobalModel<T extends QueryDeepPartialEntity<T>>{
     constructor(repo:Repository<T>){
         this.repo=repo
     }
-
+//Insert new data in database
     create(object: T) {
         return this.repo.insert(object)
     }
-
+//updates the entity
     save(object: T) {
         return this.repo.save(object)
     }
-
+// retrieves multiple entities from the database based on the provided options.
     find(option:FindManyOptions<T>): Promise<T[]> {
         return this.repo.find(option)
     }
+
 
     findOne(option:FindManyOptions<T>): Promise<T | null> {
         return this.repo.findOne(option)
     }
 
-    // TODO: Change settings preferences
-    paginationResult(skip:number,option:FindManyOptions<T>){
-        let take=global_settings.general.pagination
-        return this.repo.find({skip,take,...option})
-    }
+ 
 
     count(where: FindOptionsWhere<T> | FindOptionsWhere<T>[], relations?: FindOptionsRelations<T> | null, skip?: number, order?: FindOptionsOrder<T>) {
         return this.repo.count({ where, relations, skip, order })
     }
-
+//The findByCount method retrieves entities and the total count of entities that match the given criteria.
     findByCount(where: FindOptionsWhere<T> | FindOptionsWhere<T>[], relations?: FindOptionsRelations<T> | null, skip?: number, order?: FindOptionsOrder<T>) {
         return this.repo.findAndCount({ where, relations, skip, order })
     }
+//removes an entity from the database.
 
     delete(object: T) {
         return this.repo.remove(object)
